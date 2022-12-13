@@ -15,10 +15,146 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font List -->
+        <!-- font-family: 'Poppins', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
     <!-- i con -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- style -->
+    <style>
+        :root {
+            --aCol01 : #F8F8FF;
+
+            --E01 : 'Poppins', sans-serif;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        /** second **/
+        #second {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
+
+        /** third **/
+        #third {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    
+    <!---->
+    <div id="under">
+        <!-- Mbtn -->
+        <div id="Mbtn">
+            <div class="MbtnM MbtnA"><i class='bx bx-menu' ></i></div>
+            <div class="MbtnX MbtnA"><i class='bx bx-x'></i></i></div>
+            <div class="MbtnT MbtnA"><i class='bx bx-up-arrow-alt' ></i></i></div>
+            <div class="MbtnB MbtnA"><i class='bx bx-down-arrow-alt' ></i></i></div>
+        </div>
+        <!-- main -->
+        <div id="main">
+            <div class="mainCover">
+                <!-- op0.4 // op0.8 -->
+            </div>
+        </div>
+        <!-- first -->
+        <div id="first">
+            <!-- link log -->
+            <div class="linkLogo">
+                <ul>
+                    <li><a href="#none"><img src="/Blue/Photo/bn_Budokan.jpg" alt="linkLogo01"></a></li>
+                    <li><a href="#none"><img src="/Blue/Photo/bn_detour.jpg" alt="linkLogo02"></a></li>
+                    <li><a href="#none"><img src="/Blue/Photo/bn_fcbanner.png" alt="linkLogo03"></a></li>
+                    <li><a href="#none"><img src="/Blue/Photo/bn_officialgoodsstore.jpg" alt="linkLogo04"></a></li>
+                    <li><a href="#none"><img src="/Blue/Photo/bn_shallwedance.jpg" alt="linkLogo05"></a></li>
+                </ul>
+            </div>
+            <!-- menu -->
+            <div class="menu">
+                <!---->
+                <div class="logo"></div>
+                <!---->
+                <div class="list">
+                    <ul>
+                        <li><a href="#none"><span>Information</span></a></li>
+                        <li><a href="#none"><span>Profile</span></a></li>
+                        <li><a href="#none"><span>Discography</span></a></li>
+                        <li><a href="#none"><span>Live</span></a></li>
+                        <li><a href="#none"><span>Media</span></a></li>
+                        <li><a href="#none"><span>Fan Club<i class='bx bx-up-arrow-alt' ></i></span></a></li>
+                        <li><a href="#none"><span>Goods<i class='bx bx-up-arrow-alt' ></i></span></a></li>
+                        <li><a href="#none"><span>Mail Magazine<i class='bx bx-up-arrow-alt' ></i></span></a></li>
+                        <li><a href="#none"><span>Twitter<i class='bx bx-up-arrow-alt' ></i></span></a></li>
+                        <li><a href="#none"><span>YouTube<i class='bx bx-up-arrow-alt' ></i></span></a></li>
+                    </ul>
+                </div>
+                <!---->
+                <div class="arrow">
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+        </div>
+        <!-- second -->
+        <div id="second"></div>
+        <!-- third -->
+        <div id="third"></div>
+    </div>
 </body>
 </html>
+
+<!--
+    MbtnA[0].addEventListener("click", function(){
+        /****/
+        MbtnA[0].style.opacity = 0;
+        MbtnA[0].style.visibility = "hidden";
+        /****/
+        MbtnA[1].style.opacity = 0.4;
+        MbtnA[1].style.visibility = "visible";
+        /****/
+        setTimeout(() => {
+            MbtnA[2].style.opacity = 0.4;
+            MbtnA[2].style.visibility = "visible";
+            MbtnA[2].style.bottom = "64px";
+        }, 300);
+        setTimeout(() => {
+            MbtnA[3].style.opacity = 0.4;
+            MbtnA[3].style.visibility = "visible";
+            MbtnA[3].style.bottom = "32px";    
+        }, 100);
+    });
+
+    MbtnA[1].addEventListener("click", function(){
+        /****/
+        MbtnA[0].style.opacity = 0.4;
+        MbtnA[0].style.visibility = "visible";
+        /****/
+        MbtnA[1].style.opacity = 0;
+        MbtnA[1].style.visibility = "hidden";
+        /****/
+        setTimeout(() => {
+            MbtnA[2].style.opacity = 0;
+            MbtnA[2].style.visibility = "hidden";
+            MbtnA[2].style.bottom = "0px";
+        }, 300);
+        setTimeout(() => {
+            MbtnA[3].style.opacity = 0;
+            MbtnA[3].style.visibility = "hidden";
+            MbtnA[3].style.bottom = "0px";    
+        }, 100);
+    });
+-->
