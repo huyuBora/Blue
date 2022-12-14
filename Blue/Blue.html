@@ -54,6 +54,49 @@
             width: 100%;
             height: 100vh;
         }
+
+        /** footer **/
+        #footer {
+            background: sandybrown;
+            position: relative;
+
+            width: 100%;
+            height: 20vh;
+        }
+
+        .section {
+            transition-property: ;
+            transition-duration: 1s;
+        }
+
+        .titleMove{
+            transition-property: left;
+            transition-duration: 1s;
+        }
+
+        .title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+        }
+
+        .title h1 {
+            background: saddlebrown;
+            position: relative;
+
+            left: -50px;
+
+            font-size: 21px;
+            font-family: var(--E01);
+            font-weight: 600;
+
+            letter-spacing: 5px;
+
+            color: #A9A9A9;
+        }
     </style>
 </head>
 <body>
@@ -61,10 +104,12 @@
     <div id="under">
         <!-- Mbtn -->
         <div id="Mbtn">
-            <div class="MbtnM MbtnA"><i class='bx bx-menu' ></i></div>
-            <div class="MbtnX MbtnA"><i class='bx bx-x'></i></i></div>
-            <div class="MbtnT MbtnA"><i class='bx bx-up-arrow-alt' ></i></i></div>
-            <div class="MbtnB MbtnA"><i class='bx bx-down-arrow-alt' ></i></i></div>
+            <ul>
+                <li class="MbtnA"><i class='bx bx-menu' ></i></li>
+                <li class="MbtnA"><i class='bx bx-x'></i></li>
+                <li class="MbtnA"><i class='bx bx-up-arrow-alt' ></i></li>
+                <li class="MbtnA"><i class='bx bx-down-arrow-alt' ></i></li>
+            </ul>
         </div>
         <!-- main -->
         <div id="main">
@@ -73,7 +118,7 @@
             </div>
         </div>
         <!-- first -->
-        <div id="first">
+        <div id="first" class="section">
             <!-- link log -->
             <div class="linkLogo">
                 <ul>
@@ -110,51 +155,28 @@
             </div>
         </div>
         <!-- second -->
-        <div id="second"></div>
+        <div id="second" class="section">
+            <!-- title -->
+            <div class="title">
+                <h1 class="titleMove">Information</h1>
+            </div>
+        </div>
         <!-- third -->
-        <div id="third"></div>
+        <div id="third" class="section">
+            <!-- title -->
+            <div class="title">
+                <h1 class="titleMove">Profile</h1>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer" class="section"></div>
     </div>
 </body>
 </html>
 
 <!--
-    MbtnA[0].addEventListener("click", function(){
-        /****/
-        MbtnA[0].style.opacity = 0;
-        MbtnA[0].style.visibility = "hidden";
-        /****/
-        MbtnA[1].style.opacity = 0.4;
-        MbtnA[1].style.visibility = "visible";
-        /****/
-        setTimeout(() => {
-            MbtnA[2].style.opacity = 0.4;
-            MbtnA[2].style.visibility = "visible";
-            MbtnA[2].style.bottom = "64px";
-        }, 300);
-        setTimeout(() => {
-            MbtnA[3].style.opacity = 0.4;
-            MbtnA[3].style.visibility = "visible";
-            MbtnA[3].style.bottom = "32px";    
-        }, 100);
-    });
+    for(let i = 0; i < titleMove.length; i++){}
 
-    MbtnA[1].addEventListener("click", function(){
-        /****/
-        MbtnA[0].style.opacity = 0.4;
-        MbtnA[0].style.visibility = "visible";
-        /****/
-        MbtnA[1].style.opacity = 0;
-        MbtnA[1].style.visibility = "hidden";
-        /****/
-        setTimeout(() => {
-            MbtnA[2].style.opacity = 0;
-            MbtnA[2].style.visibility = "hidden";
-            MbtnA[2].style.bottom = "0px";
-        }, 300);
-        setTimeout(() => {
-            MbtnA[3].style.opacity = 0;
-            MbtnA[3].style.visibility = "hidden";
-            MbtnA[3].style.bottom = "0px";    
-        }, 100);
-    });
+    titleMove[i].style.left = "-50px";
+    titleMove[i].style.left = "0px";
 -->
