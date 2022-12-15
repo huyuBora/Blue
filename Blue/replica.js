@@ -113,23 +113,33 @@ function loadEvent() {
     /****/
     let section = document.querySelectorAll(".section");
     let titleMove = document.querySelectorAll(".titleMove");
-    let observer = new IntersectionObserver((e)=>{
-        // 감시 중 박스가 화면에 등장하면 코드 실행
-        e.forEach((box)=>{
-            for(let i = 0; i < titleMove.length; i++){
-                if(box.isIntersecting){// "isIntersecting" 화면에 보일 때
-                    let le = box.target.style.opacity = 1;
-                    
-                }else{
-                    box.target.style.opacity = 0;
-                    
-                }
+
+    let sectionBox = new IntersectionObserver((sectionFor)=>{
+        sectionFor.forEach((Por)=>{
+            if(Por.isIntersecting){
+                Por.target.classList.add("Vi");
+            }else{
+                Por.target.classList.remove("Vi");
             }
         });
     });
 
-    observer.observe(section[0]);
-    observer.observe(section[1]);
-    observer.observe(section[2]);
-    observer.observe(section[3]);
+    sectionBox.observe(section[0]);//firet
+    sectionBox.observe(section[1]);//second
+    sectionBox.observe(section[2]);//third
+    sectionBox.observe(section[3]);//footer
+
+    /****/
+    function secondEvent() {
+        let secondInf = document.getElementById("second").querySelectorAll(".inf");
+
+        for(let i = 0; i < secondInf.length; i++){
+            secondInf[i].addEventListener("click", function(){
+                secondInf[i].classList.toggle("Ev");
+            });
+        }
+    }/****/
+
+    secondEvent();
 }/** load event **/
+

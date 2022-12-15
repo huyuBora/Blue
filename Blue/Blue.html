@@ -39,20 +39,13 @@
             box-sizing: border-box;
         }
 
-        /** second **/
-        #second {
-            position: relative;
-
-            width: 100%;
-            height: 100vh;
-        }
-
         /** third **/
         #third {
             position: relative;
 
             width: 100%;
             height: 100vh;
+            margin-top: 30px;
         }
 
         /** footer **/
@@ -64,39 +57,52 @@
             height: 20vh;
         }
 
+        /****/
         .section {
-            transition-property: ;
+            opacity: 0;
+            
+            transition-property: opacity;
             transition-duration: 1s;
         }
 
-        .titleMove{
-            transition-property: left;
-            transition-duration: 1s;
+        .section.Vi {
+            opacity: 1;
         }
 
-        .title {
+        /****/
+        .section div.title {
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
+
+            top: 0;
+            left: 0;
             width: 100%;
             height: 50px;
         }
 
-        .title h1 {
-            background: saddlebrown;
+        .section div.title h1.titleMove {
             position: relative;
 
             left: -50px;
 
-            font-size: 21px;
-            font-family: var(--E01);
+            font-size: 20px;
             font-weight: 600;
+            font-family: var(--E01);
+            letter-spacing: 1px;
+            color: var(--aCol01);
 
-            letter-spacing: 5px;
+            opacity: 0;
 
-            color: #A9A9A9;
+            transition-property: left, opacity;
+            transition-duration: 1s, 1s;
         }
+
+        .section.Vi div.title h1.titleMove {
+            left: 0px;
+            opacity: 0.6;
+        }
+
     </style>
 </head>
 <body>
@@ -160,6 +166,245 @@
             <div class="title">
                 <h1 class="titleMove">Information</h1>
             </div>
+            <!-- container -->
+            <div class="container">
+                <!---->
+                <div class="inf"><!-- // -->
+                    <div class="infBox"><!---->
+                        <div class="inf__h"><!-- // -->
+                            <!---->
+                            <ul>
+                                <li>2022</li>
+                                <li>12.06</li>
+                            </ul>
+                            <!---->
+                            <ul>
+                                <li>来年3/8（水）2ndフルアルバム「HUMAN」リリース決定。</li>
+                            </ul>
+                        </div>
+                        <div class="inf__t">
+                            <ul>
+                                <li>
+ReoNa初の日本武道館公演開催直後の3/8（水）に、ReoNaとして2枚目となる、<br>
+フルアルバム「HUMAN」のリリースが決定しました！<br>
+1stフルアルバム「unknown」から約2年半ぶりとなる新作フルアルバムは、<br>
+TVアニメ「シャドーハウス」エンディングテーマ「ないない」、<br>
+家庭用ゲーム「月姫 -A piece of blue glass moon-」主題歌「生命線」、<br>
+TVアニメ「シャドーハウス 2nd Season」オープニングテーマ「シャル・ウィ・ダンス？」など、<br>
+ReoNaが担当するアニメ・ゲームのテーマソングに加え、書き下ろし新曲も続々と収録した、<br>
+渾身の最新アルバムとなります！<br>
+完全数量生産限定盤は、Music Videoなどを収録した特典映像Blu-rayに加え、<br>
+今年の6月に開催されたアコースティックツアー<br>
+「Naked」の最終日・Zepp Haneda(TOKYO)の音源を収録した豪華BOX仕様！<br>
+CDの収録楽曲情報や特典情報など、さらなる追加発表をお楽しみに！<br>
+【ReoNa 2nd Full Album「HUMAN」商品概要】<br>
+アルバムタイトル：「HUMAN」<br>
+発売日：2023年3月8日（水）<br>
+レーベル：SACRA MUSIC<br>
+CD予約ページ：https://reona.lnk.to/HUMAN_pkg<br>
+■完全数量生産限定盤 [CD+BD+LiveCD+フォトブックレット] VVCL 2202-2205 / ￥6,600（税込）<br>
+☆特典映像（Music Video含）収録Blu-ray Disc同梱<br>
+☆ライブCD同梱（ReoNa Acoustic Concert Tour 2022 “Naked” Live at Zepp Haneda(TOKYO) 2022.06.10）<br>
+☆撮りおろしフォトブック同梱<br>
+☆豪華BOX仕様<br>
+■初回生産限定盤 [CD+BD] VVCL 2206-2207 / ￥4,400（税込）<br>
+☆特典映像（Music Video含）収録Blu-ray Disc同梱<br>
+■通常盤 [CD] VVCL 2208 / ￥3,300（税込）<br>
+発売をお楽しみに！<br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!---->
+                <div class="inf"><!-- // -->
+                    <div class="infBox"><!---->
+                        <div class="inf__h"><!-- // -->
+                            <!---->
+                            <ul>
+                                <li>2022</li>
+                                <li>12.05</li>
+                            </ul>
+                            <!---->
+                            <ul>
+                                <li>12/6（火）放送 特別番組『ReoNaニューシングル「Alive」発売記念スペシャル特番 in ABEMA』視聴者購入特典情報。</li>
+                            </ul>
+                        </div>
+                        <div class="inf__t">
+                            <ul>
+                                <li>
+12/6（火）19:30～ ABEMAにて放送される特番の放送を記念して、12月7日（水）発売のReoNa 「Alive」（3形態のうちいずれか）を、<br>
+Sony Music Shopにて下記対象期間中にご購入いただいた方に、＜ReoNa直筆サイン入りポストカード＞をプレゼントいたします。<br>
+【ご購入対象期間】<br>
+2022/12/6（火）19:30～ 2022/12/6（火）23：59までに注文・入金完了の方<br>
+※放送開始～放送当日の23:59まで<br>
+【Sony Music Shop購入ページ】<br>
+■初回生産限定盤<br>
+<img src="/Blue/Photo/secondPhoto__01.jpg" alt="second__01" width="250px" height="350px"><br>
+<a href="#none">https://www.sonymusicshop.jp/m/item/itemShw.php?utm_source=os&utm_medium=owned&utm_campaign=MATO000003318&cd=MATO000003318</a><br>
+■通常盤<br>
+<img src="/Blue/Photo/secondPhoto__02.jpg" alt="second__01" width="250px" height="300px"><br>
+<a href="#none">https://www.sonymusicshop.jp/m/item/itemShw.php?utm_source=os&utm_medium=owned&utm_campaign=MATO000003319&cd=MATO000003319</a><br>
+■期間生産限定盤<br>
+<img src="/Blue/Photo/secondPhoto__03.jpg" alt="second__01" width="250px" height="300px"><br>
+<a href="#none">https://www.sonymusicshop.jp/m/item/itemShw.php?utm_source=os&utm_medium=owned&utm_campaign=MATO000003320&cd=MATO000003320</a><br>
+※購入ページは、番組開始の12月6日（火）19:30から有効となりますのでご注意ください。<br>
+【ポストカード絵柄】　※下記の絵柄にReoNa本人直筆のサインが入ります。<br>
+<img src="/Blue/Photo/secondPhoto__04.jpg" alt="second__01" width="250px" height="300px"><br>
+【『ReoNaニューシングル「Alive」発売記念スペシャル特番 in ABEMA』詳細】<br>
+＜放送日時＆番組URL＞<br>
+放送日時：2022年12月6日（火）19:30〜20:30<br>
+放送チャンネル：ABEMAアニメLIVEチャンネル<br>
+番組URL<a href="#none">：https://abema.tv/channels/anime-live/slots/DBNbzJKioqzhVZ</a><br>
+出演者：ReoNa<br>
+MC：加東岳史（「SPICE」アニメ/ゲームジャンル編集長）<br>
+ゲスト：黒沢ともよ、松田颯水<br>
+（ ※敬称略・順不同 ）<br>
+【ご購入対象期間】<br>
+2022年12月6日（火）19:30～ 2022年12月6日（火）23：59までに注文・入金完了の方<br>
+※決済方法に、前払い方式オンライン収納代行（コンビニ払い、Pay-easy、ネットバンキング）を選択いただけるのは、<br>
+12月6日（火）23:00までとさせていただきます。<br>
+※通常よりも入金期間が短くなっております。必ず12月6日（火）23：59までにご入金ください。<br>
+※PC/モバイルサイトどちらからでもお申込み頂けます。<br>
+※上記期間中に、入金まで完了された方が対象となります。<br>
+※CD販売数には数に限りがありますので、上限数に達し次第、販売終了となります。<br>
+※決済方法は、クレジットカード・前払い方式オンライン収納代行（コンビニ払い、Pay-easy、ネットバンキング）のみとさせて頂きます。<br>
+代金引換・・Amazon Pay決済・楽天ペイ・d払い・後払いでの決済方法はお選び頂けません。<br>
+※前払い方式オンライン収納代行（コンビニ払い、Pay-easy、ネットバンキング）をご選択の場合は、<br>
+1配送毎に別途金187円（税込）の支払手数料が必要です。また支払期限を過ぎると自動的に購入権利が取り消されますのでご注意ください。<br>
+※いかなる場合でもご注文のキャンセル、返品、返金はできません。商品の受取拒否等があった場合、<br>
+今後の特典への応募参加をお断りさせていただく場合がございます。<br>
+※本施策限定特典付き商品は、Sony Music Shopにて上記期間限定でご購入いただけます。<br>
+※本イベント対象商品カートにて対象商品を予約されたお客様は＜ReoNa直筆サイン入りポストカード＞以外のCD購入者特典は付与されません。<br>
+予めご了承ください。<br>
+---------------------------------------------<br>
+是非、期間中にSony Music Shopにてご予約して、＜ReoNa直筆サイン入りポストカード＞をゲットしてください！<br>
+
+
+
+
+
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!---->
+                <div class="inf"><!-- // -->
+                    <div class="infBox"><!---->
+                        <div class="inf__h"><!-- // -->
+                            <!---->
+                            <ul>
+                                <li>2022</li>
+                                <li>12.06</li>
+                            </ul>
+                            <!---->
+                            <ul>
+                                <li>来年3/8（水）2ndフルアルバム「HUMAN」リリース決定。</li>
+                            </ul>
+                        </div>
+                        <div class="inf__t">
+                            <ul>
+                                <li>
+ReoNa初の日本武道館公演開催直後の3/8（水）に、ReoNaとして2枚目となる、<br>
+フルアルバム「HUMAN」のリリースが決定しました！<br>
+1stフルアルバム「unknown」から約2年半ぶりとなる新作フルアルバムは、<br>
+TVアニメ「シャドーハウス」エンディングテーマ「ないない」、<br>
+家庭用ゲーム「月姫 -A piece of blue glass moon-」主題歌「生命線」、<br>
+TVアニメ「シャドーハウス 2nd Season」オープニングテーマ「シャル・ウィ・ダンス？」など、<br>
+ReoNaが担当するアニメ・ゲームのテーマソングに加え、書き下ろし新曲も続々と収録した、<br>
+渾身の最新アルバムとなります！<br>
+完全数量生産限定盤は、Music Videoなどを収録した特典映像Blu-rayに加え、<br>
+今年の6月に開催されたアコースティックツアー<br>
+「Naked」の最終日・Zepp Haneda(TOKYO)の音源を収録した豪華BOX仕様！<br>
+CDの収録楽曲情報や特典情報など、さらなる追加発表をお楽しみに！<br>
+【ReoNa 2nd Full Album「HUMAN」商品概要】<br>
+アルバムタイトル：「HUMAN」<br>
+発売日：2023年3月8日（水）<br>
+レーベル：SACRA MUSIC<br>
+CD予約ページ：https://reona.lnk.to/HUMAN_pkg<br>
+■完全数量生産限定盤 [CD+BD+LiveCD+フォトブックレット] VVCL 2202-2205 / ￥6,600（税込）<br>
+☆特典映像（Music Video含）収録Blu-ray Disc同梱<br>
+☆ライブCD同梱（ReoNa Acoustic Concert Tour 2022 “Naked” Live at Zepp Haneda(TOKYO) 2022.06.10）<br>
+☆撮りおろしフォトブック同梱<br>
+☆豪華BOX仕様<br>
+■初回生産限定盤 [CD+BD] VVCL 2206-2207 / ￥4,400（税込）<br>
+☆特典映像（Music Video含）収録Blu-ray Disc同梱<br>
+■通常盤 [CD] VVCL 2208 / ￥3,300（税込）<br>
+発売をお楽しみに！<br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!---->
+                <div class="inf"><!-- // -->
+                    <div class="infBox"><!---->
+                        <div class="inf__h"><!-- // -->
+                            <!-- 1020 -->
+                            <ul>
+                                <li>2022</li>
+                                <li>12.06</li>
+                            </ul>
+                            <!---->
+                            <ul>
+                                <li>来年3/8（水）2ndフルアルバム「HUMAN」リリース決定。</li>
+                            </ul>
+                        </div>
+                        <div class="inf__t">
+                            <ul>
+                                <li>
+ReoNa初の日本武道館公演開催直後の3/8（水）に、ReoNaとして2枚目となる、<br>
+フルアルバム「HUMAN」のリリースが決定しました！<br>
+1stフルアルバム「unknown」から約2年半ぶりとなる新作フルアルバムは、<br>
+TVアニメ「シャドーハウス」エンディングテーマ「ないない」、<br>
+家庭用ゲーム「月姫 -A piece of blue glass moon-」主題歌「生命線」、<br>
+TVアニメ「シャドーハウス 2nd Season」オープニングテーマ「シャル・ウィ・ダンス？」など、<br>
+ReoNaが担当するアニメ・ゲームのテーマソングに加え、書き下ろし新曲も続々と収録した、<br>
+渾身の最新アルバムとなります！<br>
+完全数量生産限定盤は、Music Videoなどを収録した特典映像Blu-rayに加え、<br>
+今年の6月に開催されたアコースティックツアー<br>
+「Naked」の最終日・Zepp Haneda(TOKYO)の音源を収録した豪華BOX仕様！<br>
+CDの収録楽曲情報や特典情報など、さらなる追加発表をお楽しみに！<br>
+【ReoNa 2nd Full Album「HUMAN」商品概要】<br>
+アルバムタイトル：「HUMAN」<br>
+発売日：2023年3月8日（水）<br>
+レーベル：SACRA MUSIC<br>
+CD予約ページ：https://reona.lnk.to/HUMAN_pkg<br>
+■完全数量生産限定盤 [CD+BD+LiveCD+フォトブックレット] VVCL 2202-2205 / ￥6,600（税込）<br>
+☆特典映像（Music Video含）収録Blu-ray Disc同梱<br>
+☆ライブCD同梱（ReoNa Acoustic Concert Tour 2022 “Naked” Live at Zepp Haneda(TOKYO) 2022.06.10）<br>
+☆撮りおろしフォトブック同梱<br>
+☆豪華BOX仕様<br>
+■初回生産限定盤 [CD+BD] VVCL 2206-2207 / ￥4,400（税込）<br>
+☆特典映像（Music Video含）収録Blu-ray Disc同梱<br>
+■通常盤 [CD] VVCL 2208 / ￥3,300（税込）<br>
+発売をお楽しみに！<br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!---->
+                <div class="more">
+                    <a href="#none">
+                        <h1>more</h1>
+                    </a>
+                </div>
+            </div>
         </div>
         <!-- third -->
         <div id="third" class="section">
@@ -169,7 +414,11 @@
             </div>
         </div>
         <!-- footer -->
-        <div id="footer" class="section"></div>
+        <div id="footer" class="section">
+            <div class="title">
+                <h1 class="titleMove">Profile</h1>
+            </div>
+        </div>
     </div>
 </body>
 </html>
