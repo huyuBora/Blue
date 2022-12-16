@@ -1,3 +1,5 @@
+/****/
+/****/
 /** #Mbtn **/
 #Mbtn {
     z-index: 10;
@@ -150,8 +152,9 @@ menu **/
     align-items: center;
 
     bottom: 10px;
-    width: 1024px;
-    height: 200px;
+
+    transition-property: width;
+    transition-duration: 1s;
 }
 
 /** first
@@ -171,23 +174,29 @@ menu logo **/
 menu list **/
 #first .menu .list {
     position: relative;
+
     width: 100%;
-    height: 70px;
+
+    transition-property: height;
+    transition-duration: 1s;
 }
 
 #first .menu .list ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 
     width: 100%;
     height: 100%;
+
+    transition-property: flexWrap;
+    transition-duration: 1s;
 }
 
 #first .menu .list ul li {
     position: relative;
 
-    width: 100px;
     height: 50px;
 }
 
@@ -197,13 +206,10 @@ menu list **/
     justify-content: center;
     align-items: center;
 
-    font-size: 12px;
     font-weight: 600;
     font-family: var(--E01);
 
     color: var(--aCol01);
-
-    letter-spacing: 0.8px;
 
     height: 100%;
 
@@ -307,7 +313,7 @@ menu arrow **/
     position: relative;
     display: flex;
 
-    width: 80%;
+    width: 90%;
     height: 80px;
 
     margin: 5px 0px 5px 0px;
@@ -317,8 +323,8 @@ menu arrow **/
 
     overflow: hidden;
 
-    transition-property: height;
-    transition-duration: 1s;
+    transition-property: height, width;
+    transition-duration: 1s, 1s;
 }
 
 #second .container .inf.Ev:nth-child(1) {
@@ -326,7 +332,15 @@ menu arrow **/
 }
 
 #second .container .inf.Ev:nth-child(2) {
-    height: 2880px;
+    height: 3050px;
+}
+
+#second .container .inf.Ev:nth-child(3) {
+    height: 1100px;
+}
+
+#second .container .inf.Ev:nth-child(4) {
+    height: 550px;
 }
 
 #second .container .inf .infBox {
@@ -353,15 +367,15 @@ menu arrow **/
     justify-content: center;
     align-items: center;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    font-family: var(--E01);
+    font-family: var(--J01);
     color: var(--aCol01);
 
     opacity: 0.4;
 
-    transition-property: opacity;
-    transition-duration: 1s;
+    transition-property: opacity, font-size;
+    transition-duration: 1s, 1s;
 }
 
 #second .container .inf:hover .infBox .inf__h ul {
@@ -378,7 +392,7 @@ menu arrow **/
 #second .container .inf .infBox .inf__h ul:nth-child(1) li:nth-child(2) {
     position: absolute;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
     font-size: 10px;
 }
@@ -423,33 +437,6 @@ menu arrow **/
     font-size: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /****/
 #second .container .more {
     position: relative;
@@ -468,6 +455,8 @@ menu arrow **/
 }
 
 #second .container .more a h1 {
+    position: relative;
+
     font-size: 12px;
     font-weight: 600;
     font-family: var(--E01);
@@ -475,4 +464,80 @@ menu arrow **/
     color: var(--aCol01);
 
     opacity: 0.4;
+}
+
+#second .container .more a h1::after {
+    content: '';
+    background: var(--aCol01);
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-bottom: 2px solid var(--aCol01);
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+#second .container .more a:hover h1::after {
+    width: 100%;
+}
+
+/****/
+/****/
+/****/
+/** third **/
+#third {
+    position: relative;
+
+    width: 100%;
+    margin-top: 50px;
+}
+
+#third .ina {
+    position: relative;
+
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+#third .ina ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#third .ina ul li {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--J01);
+
+    color: var(--aCol01);
+
+    opacity: 0.4;
+
+    margin-bottom: 15px;
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+#third .ina:hover ul li {
+    opacity: 0.7;
+}
+
+/****/
+/****/
+/****//** Discographt **/
+/** fourth **/
+#fourth {
+    position: relative;
+
+    width: 100%;
+    height: calc( 100% - 50px );
+
+    margin-top: 50px;
 }

@@ -1,6 +1,4 @@
-
-
-
+let firstMenuList = document.getElementById("first").querySelector(".menu").querySelectorAll(".list > ul > li");
 window.addEventListener("load", loadEvent);
 function loadEvent() {
     let firstLinkLogo = document.getElementById("first").querySelectorAll(".linkLogo > ul > li > a");
@@ -20,9 +18,38 @@ function loadEvent() {
 
     let firstMenuList = document.getElementById("first").querySelector(".menu").querySelectorAll(".list > ul > li");
     for(let i = 0; i < firstMenuList.length; i++){
-        window.addEventListener("scroll", function(){
-            // menu list click move
+        firstMenuList[i].addEventListener("click", function(){
+            switch(firstMenuList[i]) {
+                case firstMenuList[0]:
+                    document.getElementById("second").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
+                case firstMenuList[1]:
+                    document.getElementById("third").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "center"
+                    });
+                    break;
+            
+                default:
+                    break;
+            }
         });
+
+        /**
+         * 
+        firstMenuList[0].addEventListener("click", function(){
+            document.getElementById("second").scrollIntoView({
+                behavior : "smooth",
+                inline : "start",
+                block : "center"
+            });
+        });
+         */
     }
 
     window.addEventListener("scroll", function(){
@@ -127,7 +154,14 @@ function loadEvent() {
     sectionBox.observe(section[0]);//firet
     sectionBox.observe(section[1]);//second
     sectionBox.observe(section[2]);//third
-    sectionBox.observe(section[3]);//footer
+    sectionBox.observe(section[3]);//fourth
+    sectionBox.observe(section[4]);//fifth
+    sectionBox.observe(section[5]);//sixth
+    sectionBox.observe(section[6]);//seventh
+    sectionBox.observe(section[7]);//eighth
+    sectionBox.observe(section[8]);//ninth
+    sectionBox.observe(section[9]);//tenth
+    sectionBox.observe(section[10]);//footer
 
     /****/
     function secondEvent() {

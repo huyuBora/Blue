@@ -1,0 +1,100 @@
+@media all and
+(min-width : 768px) and (max-width : 1024px) {
+    /** first **/
+
+    /** first
+    menu **/
+    #first .menu {
+        width: 768px;
+    }
+
+    #first .menu .list ul li {
+
+        width: 120px;
+    }
+
+    #first .menu .list ul li a {
+        font-size: 12px;
+    }
+
+    /** first
+    list **/
+    #first .menu .list {
+        height: 100px;
+    }
+
+    /** second **/
+
+    /** second
+    container inf **/
+    #second .container .inf.Ev:nth-child(1) {
+        height: 1020px;
+    }
+
+    #second .container .inf.Ev:nth-child(2) {
+        height: 3150px;
+    }
+
+    /** second
+    container inf infBox inf__h **/
+    #second .container .inf .infBox .inf__h ul {
+        font-size: 12px;
+    }
+
+    /** second
+    container inf infBox inf__t **/
+    #second .container .inf .infBox .inf__t ul {
+        font-size: 11px;
+    }
+}
+
+@media all and
+(min-width : 1024px) and (max-width : 1440px) {
+    /** first **/
+
+    /** first
+    menu **/
+    #first .menu {
+        width: 1024px;
+    }
+
+    #first .menu .list ul li {
+        width: 100px;
+    }
+
+    #first .menu .list ul li a {
+        font-size: 12px;
+
+        letter-spacing: 0.8px;
+    }
+
+    /** first
+    list **/
+    #first .menu .list {
+        height: 70px;
+    }
+
+    /** second **/
+
+    /** second
+    container inf **/
+    #second .container .inf.Ev:nth-child(1) {
+        height: 1020px;
+    }
+
+    #second .container .inf.Ev:nth-child(2) {
+        height: 3050px;
+    }
+
+    /** second
+    container inf infBox inf__h **/
+    #second .container .inf .infBox .inf__h ul {
+        font-size: 12px;
+    }
+
+    /** second
+    container inf infBox inf__t **/
+    #second .container .inf .infBox .inf__t ul {
+        font-size: 12px;
+    }
+}
