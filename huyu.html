@@ -17,11 +17,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- font-family: 'Poppins', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <!-- font-family: 'M PLUS Rounded 1c', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap" rel="stylesheet">
+
     <!-- i con -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- style -->
     <style>
+        :root {
+            --aCol01 : #F8F8FF;
+            --aCol02 : #a5938d;
+
+            --E01 : 'Poppins', sans-serif;
+            --J01 : 'M PLUS Rounded 1c', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -33,9 +46,67 @@
 
             color: cadetblue;
         }
+
+        /** first **/
+        #second {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
-    
+    <div id="under">
+        <div id="main"><!-- op0.5 - op0.8 -->
+            <div class="mainCover"></div>
+        </div>
+        <div id="Box">
+            <!-- first -->
+            <div id="first" class="section">
+                <!-- int -->
+                <div class="int">
+                    <div class="logo"><!-- width 300 -->
+                        <div class="path"></div>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>Information</li>
+                            <li>Profile</li>
+                            <li>Discography</li>
+                            <li>Live</li>
+                            <li>Media</li>
+                            <li><a href="https://reonafc.com/s/n78/?ima=3046"><span>Fan Club<i class='bx bx-up-arrow-alt'></i></span></a></li>
+                            <li><a href="https://www.sonymusicshop.jp/m/sear/groupShw.php?site=S&ima=3102&cd=G001074"><span>Goods<i class='bx bx-up-arrow-alt'></i></span></a></li>
+                            <li><a href="https://ssl.sme.co.jp/mailService/ReoNa/"><span>Mail Magazine<i class='bx bx-up-arrow-alt'></i></span></a></li>
+                            <li><a href="https://twitter.com/xoxleoxox"><span>Twitter<i class='bx bx-up-arrow-alt'></i></span></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCyUhtF50BuUjr2jOhxF3IjQ"><span>YouTube<i class='bx bx-up-arrow-alt'></i></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="arrow">
+                        <i class='bx bx-chevron-down'></i>
+                    </div>
+                </div><!-- int -->
+                <!-- link Logo -->
+                <div class="linkLogo">
+                    <ul>
+                        <li><a href="#none"><img src="/Blue/Photo/bn_Budokan.jpg" alt="" width="200px"></a></li>
+                        <li><a href="#none"><img src="/Blue/Photo/bn_detour.jpg" alt="" width="200px"></a></li>
+                        <li><a href="#none"><img src="/Blue/Photo/bn_fcbanner.png" alt="" width="200px"></a></li>
+                        <li><a href="#none"><img src="/Blue/Photo/bn_officialgoodsstore.jpg" alt="" width="200px"></a></li>
+                        <li><a href="#none"><img src="/Blue/Photo/bn_shallwedance.jpg" alt="" width="200px"></a></li>
+                    </ul>
+                </div><!-- link Logo -->
+            </div><!-- first -->
+            <!---->
+            <div id="second" class="section"></div>
+            <!---->
+            <div id="third" class="section"></div>
+            <!---->
+            <div id="fourth" class="section"></div>
+            <!---->
+            <div id="fifth" class="section"></div>
+        </div>
+    </div>
 </body>
 </html>

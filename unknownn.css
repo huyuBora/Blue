@@ -1,0 +1,269 @@
+#main {
+    background: url(/Blue/Photo/reonaPhoto--01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#main .mainCover {
+    background: #000;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+/** box **/
+#Box {
+    position: relative;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** first **/
+#first {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** first
+int **/
+#first .int {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    bottom: 0;
+    width: 1024px;
+
+    margin-bottom: 10px;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+/** first
+int logo **/
+#first .int .logo {
+    position: relative;
+
+    width: 300px;
+    height: 100px;
+}
+
+#first .int .logo .path {
+    background: url(/Blue/Photo/reonaLogo--01.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+}
+
+/** first
+int menu **/
+#first .int .menu {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+#first .int .menu ul {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+}
+
+#first .int .menu ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 50px;
+
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--E01);
+    color: var(--aCol01);
+
+    opacity: 0.4;
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+#first .int .menu ul li:hover {
+    opacity: 0.8;
+}
+
+#first .int .menu ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--aCol01);
+}
+
+#first .int .menu ul li a span {
+    position: relative;
+}
+
+#first .int .menu ul li a span i {
+    position: absolute;
+
+    right: -2px;
+    top: -3px;
+
+    font-size: 12px;
+
+    transform: rotate(45deg);
+}
+
+/** first
+int arrow **/
+#first .int .arrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    overflow: hidden;
+}
+
+#first .int .arrow i {
+    position: relative;
+
+    top: 0;
+
+    font-size: 24px;
+
+    color: var(--aCol01);
+
+    opacity: 0.4;
+
+    animation-name: firstArrow;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+}
+
+@keyframes firstArrow {
+    0% {
+        top: 0;
+        opacity: 0.4;
+    }33% {
+        top: 25px;
+        opacity: 0;
+    }66% {
+        top: -25px;
+        opacity: 0;
+    }100% {
+        top: 0;
+        opacity: 0.4;
+    }
+}
+
+/** first
+linkLogo **/
+#first .linkLogo {
+    position: absolute;
+
+    left: 0;
+    width: 210px;
+    height: 400px;
+
+    margin-left: 10px;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition-property: visibility, opacity;
+    transition-duration: 1s, 1s;
+}
+
+#first .linkLogo ul {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+#first .linkLogo ul li {
+    position: relative;
+
+    left: 0px;
+    width: 200px;
+
+    opacity: 0;
+
+    transition-property: left, opacity;
+    transition-duration: 1s, 1s;
+}
+
+#first .linkLogo ul li:hover {
+    left: 10px;
+}
+
+#first .linkLogo ul li:nth-child(1) {
+    height: 120px;
+}
+#first .linkLogo ul li:nth-child(n+2) {
+    height: 65px;
+}
+
+#first .linkLogo ul li a {
+    position: relative;
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+#first .linkLogo ul li a img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
