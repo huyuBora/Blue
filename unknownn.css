@@ -1,3 +1,10 @@
+#under {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
 #main {
     background: url(/Blue/Photo/reonaPhoto--01.jpg);
     background-repeat: no-repeat;
@@ -22,6 +29,208 @@
 
     transition-property: opacity;
     transition-duration: 1s;
+}
+
+/** fNav **/
+#fNav {
+    z-index: 10;
+    position: fixed;
+
+    top: -2px;
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s, 1s;
+}
+
+/** fNav
+fint **/
+#fNav .fint {
+    position: relative;
+    backdrop-filter: blur(10px);
+
+    width: 100%;
+    height: 0px;
+    /**
+    height: 0px; **/
+
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--aCol01A);
+
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+#fNav.XX .fint {
+    height: 350px;
+}
+
+/** fNav
+fint logo **/
+#fNav .fint .fintLogo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 50px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 0.6s, 0.6s;
+}
+
+#fNav.XX .fint .fintLogo {
+    opacity: 1;
+    visibility: visible;
+}
+
+#fNav .fint .fintLogo img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+
+    width: 100px;
+    height: 35px;
+
+    opacity: 0.4;
+}
+
+/** fNav
+fint OR **/
+#fNav .fint .fintOR {
+    position: relative;
+
+    width: 100%;
+    height: calc(100% - 50px);
+
+    padding: 5px 20px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s, 1s;
+}
+
+#fNav.XX .fint .fintOR {
+    opacity: 1;
+    visibility: visible;
+
+    transition-property: opacity, visibility;
+    transition-duration: 2s, 1s;
+}
+
+#fNav .fint .fintOR ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    height: 100%;
+}
+
+#fNav .fint .fintOR ul li {
+    position: relative;
+
+    font-size: 14px;
+    font-family: var(--E01);
+    font-weight: 600;
+    color: var(--aCol01);
+
+    opacity: 0.4;
+
+    letter-spacing: 1px;
+}
+
+#fNav .fint .fintOR ul li a {
+    position: relative;
+
+    color: var(--aCol01);
+}
+
+#fNav .fint .fintOR ul li a span {
+    position: relative;
+}
+
+#fNav .fint .fintOR ul li a span i {
+    position: absolute;
+
+    top: -2px;
+    right: -2px;
+    transform: rotate(45deg);
+    font-size: 12px;
+}
+
+/** fNav
+fBtn **/
+#fNav .fBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 30px;
+}
+
+#fNav .fBtn ul {
+    backdrop-filter: blur(10px);
+    position: relative;
+    box-sizing: border-box;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 0px 0px 15px 15px;
+
+    border-left: 2px solid var(--aCol01A);
+    border-bottom: 2px solid var(--aCol01A);
+    border-right: 2px solid var(--aCol01A);
+}
+
+#fNav .fBtn ul li {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s, 1s;
+}
+
+#fNav .fBtn ul li:nth-child(1) {
+    opacity: 1;
+    visibility: visible;
+}
+#fNav .fBtn ul li:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+#fNav.XX .fBtn ul li:nth-child(1) {
+    opacity: 0;
+    visibility: hidden;
+}
+#fNav.XX .fBtn ul li:nth-child(2) {
+    opacity: 1;
+    visibility: visible;
+}
+
+#fNav .fBtn ul li i {
+    font-size: 19px;
+    color: var(--aCol01A);
 }
 
 /** box **/

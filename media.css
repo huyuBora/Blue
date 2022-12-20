@@ -1,4 +1,10 @@
 @media all and (min-width : 320px) and (max-width : 768px) {
+    /** fNav **/
+    #fNav {
+        opacity: 1;
+        visibility: visible;
+    }
+
     /** first **/
     #first .linkLogo {/** link Logo **/
         opacity: 0;
@@ -23,6 +29,12 @@
 }
 
 @media all and (min-width : 768px) and (max-width : 1024px) {
+    /** fNav **/
+    #fNav {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     /** first **/
     #first .linkLogo {/** link Logo **/
         opacity: 1;
@@ -47,6 +59,12 @@
 }
 
 @media all and (min-width : 1024px) and (max-width : 1440px) {
+    /** fNav **/
+    #fNav {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
     /** first **/
     #first .linkLogo {/** link Logo **/
         opacity: 1;

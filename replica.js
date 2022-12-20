@@ -1,5 +1,7 @@
 window.addEventListener("load", loadEvent);
 function loadEvent(){
+    let under = document.getElementById("under");
+
     /** link logo **/
     function linkLogoEvent(){
         let linkLogo = document.querySelectorAll(".linkLogo > ul li");
@@ -16,22 +18,52 @@ function loadEvent(){
             });
         }
     }
-
     linkLogoEvent();
 
     function sectionEvent() {
         let section = document.querySelectorAll(".section");
 
-        let sectionMode = new IntersectionObserver((a)=>{
-            ((mode)=>{
-
+        let sectionMode = new IntersectionObserver((sectionModeFor)=>{
+            sectionModeFor.forEach((Por)=>{
+                if(Por.isIntersecting){
+                    Por.target.classList.add("Viw");
+                }else{
+                    Por.target.classList.remove("Viw");
+                }
             });
         });
 
         sectionMode.observe(section[0]);
     }
-
     sectionEvent();
+
+    function miniNav(){
+        /** xxxi **/
+        let fNav = document.getElementById("fNav");
+        window.addEventListener("resize", function(){
+            if(window.innerWidth >= 768){
+                fNav.classList.remove("XX");
+            }
+        });
+
+        let fBtn = document.getElementById("fNav").querySelectorAll(".fBtn > ul > li");
+        for(let i = 0; i < fBtn.length; i++){
+            fBtn[i].addEventListener("click", function(){
+                switch (fBtn[i]){
+                    case fBtn[0]:
+                        fNav.classList.add("XX");
+                        break;
+                    case fBtn[1]:
+                        fNav.classList.remove("XX");
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+    }
+
+    miniNav();
 
     /** scroll **/
     window.addEventListener("scroll", function(){
