@@ -476,3 +476,123 @@ linkLogo **/
     width: 100%;
     height: 100%;
 }
+
+/** second **/
+#second {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+/** second
+box **/
+#second .box {
+    background: saddlebrown;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+/** second
+box sint **/
+#second .box .sint {
+    position: relative;
+
+    width: 80%;
+    height: 80px;
+
+    margin-bottom: 10px;
+
+    border: 2px solid var(--aCol01A);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/** second
+box sint sintP **/
+#second .box .sint .sintP {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+}
+
+/****/
+#second .box .sint .sintP .sint__ti {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+}
+
+#second .box .sint .sintP .sint__ti ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#second .box .sint .sintP .sint__ti ul:nth-child(1) {
+    flex: 1 1 0;
+}
+
+#second .box .sint .sintP .sint__ti ul:nth-child(1) li:nth-child(2) {
+    position: absolute;
+
+    top: 12px;
+    font-size: 12px;
+}
+
+
+#second .box .sint .sintP .sint__ti ul:nth-child(2) {
+    flex: 9 1 0;
+}
+
+#second .box .sint .sintP .sint__ti ul li {
+    font-size: 14px;
+    font-family: var(--J02);
+    font-weight: 600;
+
+    line-height: 15px;
+
+    color: var(--aCol01);
+}
+
+/****/
+#second .box .sint .sintP .sint__su {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#second .box .sint .sintP .sint__su ul {
+    position: relative;
+}
+
+#second .box .sint .sintP .sint__su ul li {
+    font-size: 13px;
+    font-family: var(--J01);
+    font-weight: 600;
+
+    color: var(--aCol01);
+}
+
+#second .box .sint .sintP .sint__su ul li a {
+    color: var(--aCol01);
+}

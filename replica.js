@@ -2,24 +2,7 @@ window.addEventListener("load", loadEvent);
 function loadEvent(){
     let under = document.getElementById("under");
 
-    /** link logo **/
-    function linkLogoEvent(){
-        let linkLogo = document.querySelectorAll(".linkLogo > ul li");
-        for(let i = 0; i < linkLogo.length; i++){
-            setTimeout(() => {
-                linkLogo[i].style.opacity = 0.4;
-            }, 1000 + i * 300);
-
-            linkLogo[i].addEventListener("mouseover", function(){
-                linkLogo[i].style.opacity = 0.8;
-            });
-            linkLogo[i].addEventListener("mouseout", function(){
-                linkLogo[i].style.opacity = 0.4;
-            });
-        }
-    }
-    linkLogoEvent();
-
+    /** section event **/
     function sectionEvent() {
         let section = document.querySelectorAll(".section");
 
@@ -34,38 +17,11 @@ function loadEvent(){
         });
 
         sectionMode.observe(section[0]);
+        sectionMode.observe(section[1]);
     }
     sectionEvent();
 
-    function miniNav(){
-        /** xxxi **/
-        let fNav = document.getElementById("fNav");
-        window.addEventListener("resize", function(){
-            if(window.innerWidth >= 768){
-                fNav.classList.remove("XX");
-            }
-        });
-
-        let fBtn = document.getElementById("fNav").querySelectorAll(".fBtn > ul > li");
-        for(let i = 0; i < fBtn.length; i++){
-            fBtn[i].addEventListener("click", function(){
-                switch (fBtn[i]){
-                    case fBtn[0]:
-                        fNav.classList.add("XX");
-                        break;
-                    case fBtn[1]:
-                        fNav.classList.remove("XX");
-                        break;
-                    default:
-                        break;
-                }
-            });
-        }
-    }
-
-    miniNav();
-
-    /** scroll **/
+    /** window **/
     window.addEventListener("scroll", function(){
         let pageY = window.pageYOffset;
 
@@ -77,4 +33,76 @@ function loadEvent(){
             mainCover.style.opacity = 0.5;
         }
     });
+
+    /** first Event **/
+    function firstEvent() {
+        /** fnav **/
+        function miniNav(){
+            /** xxxi **/
+            let fNav = document.getElementById("fNav");
+            window.addEventListener("resize", function(){
+                if(window.innerWidth >= 768){
+                    fNav.classList.remove("XX");
+                }
+            });
+
+            let fBtn = document.getElementById("fNav").querySelectorAll(".fBtn > ul > li");
+            for(let i = 0; i < fBtn.length; i++){
+                fBtn[i].addEventListener("click", function(){
+                    switch (fBtn[i]){
+                        case fBtn[0]:
+                            fNav.classList.add("XX");
+                            break;
+                        case fBtn[1]:
+                            fNav.classList.remove("XX");
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            }
+        }
+        miniNav();
+
+        /** link logo **/
+        function linkLogoEvent(){
+            let linkLogo = document.querySelectorAll(".linkLogo > ul li");
+            for(let i = 0; i < linkLogo.length; i++){
+                setTimeout(() => {
+                    linkLogo[i].style.opacity = 0.4;
+                }, 1000 + i * 300);
+
+                linkLogo[i].addEventListener("mouseover", function(){
+                    linkLogo[i].style.opacity = 0.8;
+                });
+                linkLogo[i].addEventListener("mouseout", function(){
+                    linkLogo[i].style.opacity = 0.4;
+                });
+            }
+        }
+        linkLogoEvent();
+    }
+    firstEvent();/** first event **/
+
+    /** second **//** information **/
+    function secondEvent(){
+        let sint = document.getElementById("second").querySelectorAll(".sint");
+        let sintTi = document.getElementById("second").querySelectorAll(".sint__ti");
+
+        for(let i = 0; i < sintTi.length; i++){
+            sintTi[i].addEventListener("click", function(){
+                for(let j = 0; j < sint.length; j++){
+                    switch (sintTi[i]) {
+                        case sintTi[0]:
+                            sint[0].classList.toggle("sinOp");
+                            break;
+                    
+                        default:
+                            break;
+                    }
+                }
+            });
+        }
+    }
+    secondEvent();
 }
