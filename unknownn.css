@@ -524,7 +524,7 @@ box sint sintP **/
 }
 
 /****/
-#second .box .sint .sintP .sint__ti {
+#second .box .sint .sintP .sintTi {
     position: relative;
     display: flex;
     justify-content: center;
@@ -534,7 +534,7 @@ box sint sintP **/
     height: 80px;
 }
 
-#second .box .sint .sintP .sint__ti ul {
+#second .box .sint .sintP .sintTi ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -542,11 +542,11 @@ box sint sintP **/
     align-items: center;
 }
 
-#second .box .sint .sintP .sint__ti ul:nth-child(1) {
+#second .box .sint .sintP .sintTi ul:nth-child(1) {
     flex: 1 1 0;
 }
 
-#second .box .sint .sintP .sint__ti ul:nth-child(1) li:nth-child(2) {
+#second .box .sint .sintP .sintTi ul:nth-child(1) li:nth-child(2) {
     position: absolute;
 
     top: 12px;
@@ -554,11 +554,11 @@ box sint sintP **/
 }
 
 
-#second .box .sint .sintP .sint__ti ul:nth-child(2) {
+#second .box .sint .sintP .sintTi ul:nth-child(2) {
     flex: 9 1 0;
 }
 
-#second .box .sint .sintP .sint__ti ul li {
+#second .box .sint .sintP .sintTi ul li {
     font-size: 14px;
     font-family: var(--J02);
     font-weight: 600;
@@ -569,7 +569,7 @@ box sint sintP **/
 }
 
 /****/
-#second .box .sint .sintP .sint__su {
+#second .box .sint .sintP .sintSu {
     position: relative;
     display: flex;
     justify-content: center;
@@ -581,11 +581,11 @@ box sint sintP **/
     box-sizing: border-box;
 }
 
-#second .box .sint .sintP .sint__su ul {
+#second .box .sint .sintP .sintSu ul {
     position: relative;
 }
 
-#second .box .sint .sintP .sint__su ul li {
+#second .box .sint .sintP .sintSu ul li {
     font-size: 13px;
     font-family: var(--J01);
     font-weight: 600;
@@ -593,6 +593,6 @@ box sint sintP **/
     color: var(--aCol01);
 }
 
-#second .box .sint .sintP .sint__su ul li a {
+#second .box .sint .sintP .sintSu ul li a {
     color: var(--aCol01);
 }

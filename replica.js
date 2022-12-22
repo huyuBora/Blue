@@ -86,23 +86,9 @@ function loadEvent(){
 
     /** second **//** information **/
     function secondEvent(){
-        let sint = document.getElementById("second").querySelectorAll(".sint");
-        let sintTi = document.getElementById("second").querySelectorAll(".sint__ti");
-
-        for(let i = 0; i < sintTi.length; i++){
-            sintTi[i].addEventListener("click", function(){
-                for(let j = 0; j < sint.length; j++){
-                    switch (sintTi[i]) {
-                        case sintTi[0]:
-                            sint[0].classList.toggle("sinOp");
-                            break;
-                    
-                        default:
-                            break;
-                    }
-                }
-            });
-        }
+        
     }
     secondEvent();
 }
+
+
