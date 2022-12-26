@@ -86,9 +86,13 @@ function loadEvent(){
 
     /** second **//** information **/
     function secondEvent(){
-        
+        let sint = document.querySelectorAll("#second .sint");
+        let sintTi = document.querySelectorAll("#second .sintTi");
+
+
     }
     secondEvent();
 }
 
-
+let sint = document.querySelectorAll("#second .sint");
+let sintTi = document.querySelectorAll("#second .sintTi");
