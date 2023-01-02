@@ -5,8 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="unknownn.css">
+    <link rel="stylesheet" href="various.css">
+    <link rel="stylesheet" href="media.css">
+
+    <!-- Js -->
+    <script defer src="replica.js"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- i con -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font-family: 'Poppins', sans-serif; --><!-- E01 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <!-- font-family: 'M PLUS Rounded 1c', sans-serif; --><!-- J01 -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap" rel="stylesheet">
+    <!-- font-family: 'Zen Old Mincho', serif; --><!-- J02 -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        :root {
+            --aCol01 : #F8F8FF;
+            --aCol01A : rgb(248, 248, 255, 0.3);
+            --aCol01B : rgb(248, 248, 255, 0.2);
+            --aCol02 : #a5938d;
+
+            --E01 : 'Poppins', sans-serif;
+            --J01 : 'M PLUS Rounded 1c', sans-serif;
+            --J02 : 'Zen Old Mincho', serif;
+        }
+
+        #first {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
+
+        #second {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
+
+        #third {
+            
+        }
+
+        #fourth {
+            
+        }
+
+        #fifth {
+            
+        }
+
+        #footer {
+            background: silver;
+            position: relative;
+
+            width: 100%;
+            height: 10vh;
+
+            opacity: 0.2;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="under">
+        <div id="cover">
+            <div class="coverOP"></div>
+        </div>
+
+        <div id="ToBtn"><!-- z-index 1000 -->
+            <div class="ToBtnBox">
+                <div class="ToBtnBoxCont">
+                    <!---->
+                    <div class="ToBtnClick">
+                        <i class='bx bx-up-arrow-alt' ></i>
+                    </div>
+                    <!---->
+                    <div class="ToBtnClick">
+                        <i class='bx bx-down-arrow-alt' ></i>
+                    </div>
+                    <!---->
+                    <div class="ToBtnClickBox">
+                        <!---->
+                        <div class="ToBtnClick">
+                            <i class='bx bx-menu' ></i>
+                        </div>
+                        <!---->
+                        <div class="ToBtnClick">
+                            <i class='bx bx-x' ></i>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- contaienr -->
+        <div class="contaner">
+            <!-- first -->
+            <div id="first"></div>
+            <!-- second -->
+            <div id="second"></div>
+            <!-- third -->
+            <div id="third"></div>
+            <!-- fourth -->
+            <div id="fourth"></div>
+            <!-- fifth -->
+            <div id="fifth"></div>
+            <!-- footer -->
+            <div id="footer"></div>
+        </div>
+    </div>
 </body>
 </html>

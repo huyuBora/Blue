@@ -1,0 +1,118 @@
+/** under **/
+#under {
+    position: relative;
+}
+
+/** cover **/
+#cover {
+    background: url(/Blue/Photo/reonaPhoto--01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#cover .coverOP {
+    background: #000;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+/** ToBtn **/
+#ToBtn {
+    z-index: 1000;
+
+    position: fixed;
+    backdrop-filter: blur(10px);
+
+    bottom: -50px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+
+    border: 2px solid var(--aCol01B);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: bottom, opacity, visibility, height;
+    transition-duration: 1s;
+}
+
+#ToBtn.Toop {
+    height: 100px;
+}
+
+#ToBtn .ToBtnBox {
+    position: absolute;
+
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+#ToBtn .ToBtnBox .ToBtnBoxCont {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+#ToBtn .ToBtnBox .ToBtnBoxCont > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 21px;
+    color: var(--aCol01A);
+}
+
+#ToBtn .ToBtnBox .ToBtnBoxCont > div.ToBtnClickBox > div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#ToBtn .ToBtnBox .ToBtnBoxCont > div.ToBtnClickBox > div:nth-child(1) {
+    opacity: 1;
+    visibility: visible;
+}
+#ToBtn .ToBtnBox .ToBtnBoxCont > div.ToBtnClickBox > div:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+#ToBtn.Toop .ToBtnBox .ToBtnBoxCont > div.ToBtnClickBox > div:nth-child(1) {
+    opacity: 0;
+    visibility: hidden;
+}
+#ToBtn.Toop .ToBtnBox .ToBtnBoxCont > div.ToBtnClickBox > div:nth-child(2) {
+    opacity: 1;
+    visibility: visible;
+}
