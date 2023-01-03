@@ -116,3 +116,272 @@
     opacity: 1;
     visibility: visible;
 }
+
+/** first **/
+#first {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** first link photo **/
+#first .linkPhoto {
+    position: absolute;
+
+    left: 5px;
+    width: 210px;
+    height: 400px;
+
+    transition-property: left, opacity, visibility;
+    transition-duration: 1s;
+}
+
+#first .linkPhoto ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100%;
+}
+
+#first .linkPhoto ul a {
+    position: relative;
+    
+    left: -300px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: left, opacity, visibility;
+    transition-duration: 1s;
+}
+
+#first .linkPhoto ul a:nth-child(1) {
+    width: 200px;
+    height: 120px;
+}
+#first .linkPhoto ul a:nth-child(n+2) {
+    width: 200px;
+    height: 65px;
+}
+
+#first .linkPhoto ul a li {
+    width: 100%;
+    height: 100%;
+}
+
+/** first menuBox **/
+#first .menuBox {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    bottom: 5px;
+    width: 100%;
+}
+
+/** first menuBox Logo **/
+#first .menuBox .firstLogo {
+    position: relative;
+
+    width: 300px;
+    height: 100px;
+}
+
+#first .menuBox .firstLogo .firstLogoPath {
+    background: url(/Blue/Photo/reonaLogo--01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.4;
+}
+
+/** first menuBox list **/
+#first .menuBox .firstList {
+    position: relative;
+
+    width: 100%;
+    height: calc(100% - 130px);
+}
+
+#first .menuBox .firstList ul {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+}
+
+#first .menuBox .firstList ul a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 50px;
+
+    opacity: 0.4;
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+#first .menuBox .firstList ul a:hover {
+    opacity: 0.8;
+}
+
+#first .menuBox .firstList ul a li {
+    position: relative;
+
+    font-size: 12px;
+    font-family: var(--E01);
+    color: var(--aCol01);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#first .menuBox .firstList ul a li span {
+    position: absolute;
+
+    top: -3px;
+    right: -1px;
+    transform: rotate(45deg);
+
+    font-size: 10px;
+}
+
+/** first menuBox Arrow **/
+#first .menuBox .firstArrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    overflow: hidden;
+}
+
+#first .menuBox .firstArrow i {
+    position: relative;
+
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--aCol01);
+
+    opacity: 0.2;
+
+    animation-name: firstArrowEvent;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes firstArrowEvent {
+    0%{
+        top: 0px;
+    }50%{
+        top: 3px;
+    }100%{
+        top: 0px;
+    }
+}
+
+/** second **/
+#second {
+    background: var(--aCol01B);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    width: 100%;
+    margin-top: 50px;
+}
+
+/** second title **/
+#second .title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: -50px;
+    height: 50px;
+    opacity: 0;
+
+    transition-property: left, opacity;
+    transition-duration: 1s;
+}
+#second.section.Map .title {
+    left: 0px;
+    opacity: 1;
+}
+
+#second .title h1 {
+    font-family: var(--E01);
+    font-weight: 600;
+    font-size: 21px;
+    letter-spacing: 2px;
+
+    color: var(--aCol01);
+    opacity: 0.6;
+}
+
+/** second intBox **/
+#second .intBox {
+    background: var(--aCol01B);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    width: 100%;
+}
+
+#second .intBox .intA {
+    background: slategray;
+    position: relative;
+
+    width: 80%;
+    height: 80px;
+
+    margin-bottom: 100px;
+
+    /**
+    overflow: hidden;
+    **/
+}
+
+#second .intBox .intA .intB {
+    background: slateblue;
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+}
+#second .intBox .intA .intC {
+    background: sienna;
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+}
