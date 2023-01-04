@@ -358,30 +358,134 @@
 }
 
 #second .intBox .intA {
-    background: slategray;
     position: relative;
 
     width: 80%;
     height: 80px;
 
-    margin-bottom: 100px;
+    border: 2px solid var(--aCol01A);
+    border-radius: 15px;
 
-    /**
+    margin-bottom: 10px;
+
+    transition-property: height;
+    transition-duration: 1s;
+
     overflow: hidden;
-    **/
 }
 
+#second .intBox .intA:nth-child(1).Soop {
+    height: 500px;
+}
+
+/** intb **/
 #second .intBox .intA .intB {
-    background: slateblue;
     position: relative;
+    display: flex;
 
     width: 100%;
     height: 80px;
+
+    color: var(--aCol01A);
 }
+
+/****/
+#second .intBox .intA .intB .intBDay {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--E01);
+    font-weight: 600;
+    font-size: 14px;
+
+    line-height: 13px;
+}
+
+#second .intBox .intA .intB .intBDay ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#second .intBox .intA .intB .intBDay ul li:nth-child(2) {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/****/
+#second .intBox .intA .intB .intBTitle {
+    position: relative;
+    display: flex;
+    flex: 9 1 0;
+    justify-content: center;
+
+    font-family: var(--J01);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#second .intBox .intA .intB .intBTitle ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 15px;
+}
+
+/****/
 #second .intBox .intA .intC {
     background: sienna;
     position: relative;
 
+    top: 0;
     width: 100%;
-    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility, height;
+    transition-duration: 1s;
+}
+
+#second .intBox .intA.Soop .intC {
+    opacity: 1;
+    visibility: visible;
+}
+
+#second .intBox .intA:nth-child(1) .intC {
+    height: calc(500px - 80px);
+}
+
+#second .intBox .intA .intC ul {
+    background: seagreen;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 13px;
+    font-family: var(--J01);
+    font-weight: 600;
+    color: var(--aCol01B);
+    line-height: 20px;
+}
+
+#second .intBox .intA .intC ul li a {
+    font-size: 13px;
+    font-family: var(--J01);
+    font-weight: 600;
+    color: var(--aCol01B);
+    line-height: 20px;
 }

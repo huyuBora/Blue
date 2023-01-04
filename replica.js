@@ -1,38 +1,39 @@
-window.addEventListener("load", loadEvent);
-function loadEvent(){
-    /** scroll event **/
-    window.addEventListener("scroll", function(){
-        /** cover  **/
-        let coverOP = document.getElementById("cover").querySelector(".coverOP");
-        if(window.pageYOffset > 120) {
-            coverOP.style.opacity = 0.8;
-        }else{
-            coverOP.style.opacity = 0.6;
-        }
-    });/** scroll event end **/
+/** window "scroll" event **/
+window.addEventListener("scroll", windowScroll);
+function windowScroll(){
+    let coverOP = document.getElementById("cover").querySelector(".coverOP");
+    if(window.pageYOffset >= 120){
+        coverOP.style.opacity = 0.8;
+    }else{
+        coverOP.style.opacity = 0.6;
+    }
+}
 
-    /** section event **/
-    function section(){
-        let section = document.querySelectorAll(".section");
+/** window "click" event **/
 
-        let sectionA = new IntersectionObserver((event)=>{
-            event.forEach((e)=>{
-                if(e.isIntersecting){
-                    e.target.classList.add("Map");
-                }else{
-                    e.target.classList.remove("Map");
-                }
-            });
+/** section event **/
+function sectionEvent(){
+    let section = document.querySelectorAll(".section");
+    
+    let sectionA = new IntersectionObserver ((sectionB)=>{
+        sectionB.forEach((sectionC)=>{
+            if(sectionC.isIntersecting){
+                sectionC.target.classList.add("Map");
+            }else{
+                sectionC.target.classList.remove("Map");
+            }
         });
+    });
 
-        sectionA.observe(section[0]);
-        sectionA.observe(section[1]);
-        sectionA.observe(section[2]);
-    }/** section event end **/
-    section();
+    sectionA.observe(section[0]);
+    sectionA.observe(section[1]);
+    sectionA.observe(section[2]);
+}
+sectionEvent();
 
-    function ToBtncEvent(){
-        let ToBtn = document.getElementById("ToBtn");
+/** ToBtn event */
+function ToBtnEvent(){
+    let ToBtn = document.getElementById("ToBtn");
         let ToBtnBox = document.getElementById("ToBtn").querySelector(".ToBtnBox");
         let ToBtnClick = document.getElementById("ToBtn").querySelectorAll(".ToBtnClick");
         window.addEventListener("scroll", function(){
@@ -79,94 +80,93 @@ function loadEvent(){
                 }
             });
         }
-    }/** ToBtn Event end */
-    ToBtncEvent();
+    }
+ToBtnEvent();
 
-    function firstEvent(){
-        let linkPhoto = document.getElementById("first").querySelector(".linkPhoto");
-        let linkPhotoA = document.getElementById("first").querySelectorAll(".linkPhoto > ul > a");
-        for(let i = 0; i < linkPhotoA.length; i++){
-            /** window load event **/
-            window.addEventListener("load", function(){
-                if(window.innerWidth >= 768){
-                    setTimeout(() => {
-                        linkPhotoA[i].style.left = "0px";
-                        linkPhotoA[i].style.opacity = "0.4";
-                        linkPhotoA[i].style.visibility = "visible";
-                    }, i * 300);
-                }else{
+/** first event **/
+function firstEvent(){
+    let linkPhoto = document.getElementById("first").querySelector(".linkPhoto");
+    let linkPhotoA = document.getElementById("first").querySelectorAll(".linkPhoto > ul > a");
+    for(let i = 0; i < linkPhotoA.length; i++){
+        /** window load event **/
+        window.addEventListener("load", function(){
+            if(window.innerWidth >= 768){
+                setTimeout(() => {
+                    linkPhotoA[i].style.left = "0px";
+                    linkPhotoA[i].style.opacity = "0.4";
+                    linkPhotoA[i].style.visibility = "visible";
+                }, i * 300);
+            }else{
+                linkPhotoA[i].style.left = "-300px";
+                linkPhotoA[i].style.opacity = "0";
+                linkPhotoA[i].style.visibility = "hieddn";
+            }
+        });
+        /** window resize event **/
+        window.addEventListener("resize", function(){
+            if(window.innerWidth >= 768){
+                setTimeout(() => {
+                    linkPhotoA[i].style.left = "0px";
+                    linkPhotoA[i].style.opacity = "0.4";
+                    linkPhotoA[i].style.visibility = "visible";
+                }, i * 300);
+            }else{
+                setTimeout(() => {
                     linkPhotoA[i].style.left = "-300px";
                     linkPhotoA[i].style.opacity = "0";
                     linkPhotoA[i].style.visibility = "hieddn";
-                }
-            });
-            /** window resize event **/
-            window.addEventListener("resize", function(){
-                if(window.innerWidth >= 768){
-                    setTimeout(() => {
-                        linkPhotoA[i].style.left = "0px";
-                        linkPhotoA[i].style.opacity = "0.4";
-                        linkPhotoA[i].style.visibility = "visible";
-                    }, i * 300);
-                }else{
-                    setTimeout(() => {
-                        linkPhotoA[i].style.left = "-300px";
-                        linkPhotoA[i].style.opacity = "0";
-                        linkPhotoA[i].style.visibility = "hieddn";
-                    }, i * 300);
-                }
-            });
-            /** window mouseover event **/
-            linkPhotoA[i].addEventListener("mouseover", function(){
-                linkPhotoA[i].style.opacity = 0.8;
-            });
-            /** window mouseout event **/
-            linkPhotoA[i].addEventListener("mouseout", function(){
-                linkPhotoA[i].style.opacity = 0.4;
-            });
-        }
-
-        let firstListA = document.getElementById("first").querySelectorAll(".firstList > ul > a");
-        for(let i = 0; i < firstListA.length; i++){
-            firstListA[i].addEventListener("click", function(){
-                switch (firstListA[i]) {
-                    case firstListA[0]:
-                        document.getElementById("second").scrollIntoView({
-                            behavior : "smooth",
-                            inline : "start",
-                            block : "start"
-                        });
-                        break;
-                
-                    default:
-                        break;
-                }
-            });
-        }
-    }/** first event end */
-    firstEvent();
-
-    function secondEvent(){
-        let intA = document.getElementById("second").querySelectorAll(".intA");
-        let intB = document.getElementById("second").querySelectorAll(".intB");
-        let Soop = document.querySelector(".Soop");
-
-        for(let i = 0; i < intB.length; i++){
-            intB[i].addEventListener("click", function(){
-                for(let j = 0; j < intA.length; j++){
-                    intA[i].classList.add("Soop");
-                }
-            });
-        }
-        Soop.addEventListener("click", function(){
-            Soop.classList.remove(".Soop");
+                }, i * 300);
+            }
         });
-    }/** second event end */
-    secondEvent();
+        /** window mouseover event **/
+        linkPhotoA[i].addEventListener("mouseover", function(){
+            linkPhotoA[i].style.opacity = 0.8;
+        });
+        /** window mouseout event **/
+        linkPhotoA[i].addEventListener("mouseout", function(){
+            linkPhotoA[i].style.opacity = 0.4;
+        });
+    }
 
+    let firstListA = document.getElementById("first").querySelectorAll(".firstList > ul > a");
+    for(let i = 0; i < firstListA.length; i++){
+        firstListA[i].addEventListener("click", function(){
+            switch (firstListA[i]) {
+                case firstListA[0]:
+                    document.getElementById("second").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    console.log(firstListA[0]);
+                    break;
+            
+                default:
+                    break;
+            }
+        });
+    }
+}
+firstEvent();
 
-}/** load event end **/
-loadEvent();
+/** second event **/
+function secondEvent(){
+    let intB = document.getElementById("second").querySelectorAll(".intB");
+    
+    intB.forEach((intBDex)=>{
+        intBDex.addEventListener("click", ()=>{
+            let intADex = intBDex.parentNode;
+            let intActive = intADex.classList.contains("Soop");
+            if(!intActive){
+                intADex.classList.add("Soop");
+            }else{
+                intADex.classList.remove("Soop");
+            }
+        });
+    });
+}
+secondEvent();
 
-let intA = document.getElementById("second").querySelectorAll(".intA");
-let intB = document.getElementById("second").querySelectorAll(".intB");
+/** 
+console.log();
+*/

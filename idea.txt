@@ -5,4 +5,19 @@
 
 ----- 0102
     ToBtn Event*
-    
+
+        IntersectionObserver* observe*
+        scrollIntoView*
+
+----- 0103
+    information* 클래스 추가가 계속 안 됨.
+
+----- 0104
+    information* 이틀에 걸쳐서 완료.
+        2번 실행이 되면서 적용이 안 됬었던 거임...
+        이거때매 몇일을 계속 찾고 수정하고 했는데... console.log(); 를 쓰고 찾음.
+
+        자바스크립트 설정한거 다시 처음부터 설정.
+
+        parentNode*
+        contains*
