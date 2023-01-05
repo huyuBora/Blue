@@ -1,3 +1,4 @@
+
 /** window "scroll" event **/
 window.addEventListener("scroll", windowScroll);
 function windowScroll(){
@@ -83,6 +84,76 @@ function ToBtnEvent(){
     }
 ToBtnEvent();
 
+/** moveTxt */
+function moveTxtEvent(){
+    let moveTxt = document.querySelectorAll(".moveTxt");
+
+    for(let i = 0; i < moveTxt.length; i++){
+        moveTxt[i].addEventListener("click", function(){
+            switch (moveTxt[i]) {
+                case moveTxt[0]:
+                    document.getElementById("second").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "center",
+                        block : "center"
+                    });
+                    break;
+                case moveTxt[10]:
+                    document.getElementById("second").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "center",
+                        block : "center"
+                    });
+                    break;
+                    /**
+                case moveTxt[]:
+                    document.getElementById("").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
+                case moveTxt[]:
+                    document.getElementById("").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
+                     */
+                default:
+                    break;
+            }
+        });
+    }
+}
+moveTxtEvent();
+
+/** ToMenu **/
+function ToMenuEvent(){
+    let firstList = document.getElementById("first").querySelector(".firstList");
+    let ToMenu = document.getElementById("ToMenu");
+
+    let ToMenuView = new IntersectionObserver ((ToMenuA)=>{
+        ToMenuA.forEach((ToMenuB)=>{
+            if(!ToMenuB.isIntersecting){
+                ToMenu.classList.add("ToMenuOpen");
+            }else if(ToMenuB.isIntersecting){
+                ToMenu.classList.remove("ToMenuOpen");
+                ToMenu.classList.remove("ab");
+            }
+        });
+    });
+
+    ToMenuView.observe(firstList);
+
+    let ToMenuBtnBox = document.getElementById("ToMenu").querySelector(".ToMenuBtnBox");
+    ToMenuBtnBox.addEventListener("click", function(){
+        ToMenu.classList.toggle("ab");
+    });
+}
+ToMenuEvent();
+
 /** first event **/
 function firstEvent(){
     let linkPhoto = document.getElementById("first").querySelector(".linkPhoto");
@@ -127,25 +198,6 @@ function firstEvent(){
             linkPhotoA[i].style.opacity = 0.4;
         });
     }
-
-    let firstListA = document.getElementById("first").querySelectorAll(".firstList > ul > a");
-    for(let i = 0; i < firstListA.length; i++){
-        firstListA[i].addEventListener("click", function(){
-            switch (firstListA[i]) {
-                case firstListA[0]:
-                    document.getElementById("second").scrollIntoView({
-                        behavior : "smooth",
-                        inline : "start",
-                        block : "start"
-                    });
-                    console.log(firstListA[0]);
-                    break;
-            
-                default:
-                    break;
-            }
-        });
-    }
 }
 firstEvent();
 
@@ -167,6 +219,35 @@ function secondEvent(){
 }
 secondEvent();
 
+function moreEvent(){
+    let num = 0
+
+    let more = document.getElementById("second").querySelector(".more");
+    more.addEventListener("click", moreClick);
+    
+    function moreClick(itemClick){
+        num += 1;
+        console.log(num);
+        switch (num) {
+            case 1:
+                console.log("하나");
+                let intD = document.getElementById("second").querySelectorAll(".intD");
+                for (let i = 0; i < intD.length; i++) {
+                    intD[i].style.display = "black";
+                }
+                break;
+            case 2:
+                console.log("둘");
+                break;
+            case 3:
+                console.log("셋");
+                break;
+            default:
+                break;
+        }
+    }
+}
+moreEvent();
 /** 
 console.log();
 */
