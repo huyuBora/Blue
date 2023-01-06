@@ -24,7 +24,7 @@
     width: 100%;
     height: 100%;
 
-    opacity: 0.5;
+    opacity: 0.6;
     transition-property: opacity;
     transition-duration: 1s;
 }
@@ -482,8 +482,7 @@
 }
 
 #second .intBox .intA,
-#second .intBox .intD
-{
+#second .intBoxA .intA {
     backdrop-filter: blur(50px);
     position: relative;
 
@@ -501,10 +500,6 @@
     overflow: hidden;
 }
 
-#second .intBox .intD {
-    display: none;
-}
-
 #second .intBox .intA:nth-child(1).Soop {
     height: 500px;
 }
@@ -519,7 +514,8 @@
 }
 
 /** intb **/
-#second .intBox .intA .intB {
+#second .intBox .intA .intB,
+#second .intBoxA .intA .intB {
     cursor: pointer;
     position: relative;
     display: flex;
@@ -534,12 +530,14 @@
     transition-property: opacity;
     transition-duration: 1s;
 }
-#second .intBox .intA .intB:hover {
+#second .intBox .intA .intB:hover
+#second .intBoxA .intA .intB:hover {
     opacity: 0.8;
 }
 
 /****/
-#second .intBox .intA .intB .intBDay {
+#second .intBox .intA .intB .intBDay,
+#second .intBoxA .intA .intB .intBDay {
     position: relative;
     display: flex;
     flex: 1 1 0;
@@ -553,7 +551,8 @@
     line-height: 13px;
 }
 
-#second .intBox .intA .intB .intBDay ul {
+#second .intBox .intA .intB .intBDay ul,
+#second .intBoxA .intA .intB .intBDay ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -561,13 +560,15 @@
     align-items: center;
 }
 
-#second .intBox .intA .intB .intBDay ul li:nth-child(2) {
+#second .intBox .intA .intB .intBDay ul li:nth-child(2),
+#second .intBoxA .intA .intB .intBDay ul li:nth-child(2) {
     font-size: 14px;
     letter-spacing: 1px;
 }
 
 /****/
-#second .intBox .intA .intB .intBTitle {
+#second .intBox .intA .intB .intBTitle,
+#second .intBoxA .intA .intB .intBTitle {
     position: relative;
     display: flex;
     flex: 9 1 0;
@@ -578,7 +579,8 @@
     font-size: 13px;
 }
 
-#second .intBox .intA .intB .intBTitle ul {
+#second .intBox .intA .intB .intBTitle ul,
+#second .intBoxA .intA .intB .intBTitle ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -589,7 +591,8 @@
 }
 
 /****/
-#second .intBox .intA .intC {
+#second .intBox .intA .intC,
+#second .intBoxA .intA .intC {
     position: relative;
 
     top: 0;
@@ -604,7 +607,8 @@
     transition-duration: 1s;
 }
 
-#second .intBox .intA.Soop .intC {
+#second .intBox .intA.Soop .intC,
+#second .intBoxA .intA.Soop .intC {
     opacity: 1;
     visibility: visible;
 }
@@ -622,7 +626,8 @@
     height: calc(820px - 80px);
 }
 
-#second .intBox .intA .intC ul {
+#second .intBox .intA .intC ul,
+#second .intBoxA .intA .intC ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -640,7 +645,8 @@
     opacity: 0.6;
 }
 
-#second .intBox .intA .intC ul li a {
+#second .intBox .intA .intC ul li a,
+#second .intBoxA .intA .intC ul li a {
     font-size: 13px;
     font-family: var(--J01);
     font-weight: 600;
@@ -648,13 +654,65 @@
     line-height: 20px;
 }
 
+/** intD A **/
+#second .intBoxA {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    margin-top: 10px;
+    width: 100%;
+    height: 0px;
+
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+#second .intBoxA.mor {
+    height: 100%;
+}
+
+#second .intBoxA .intA {
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#second .intBoxA.mor .intA {
+    opacity: 1;
+    visibility: visible;
+}
+
 /** more **/
 #second .more {
     background: var(--aCol01B);
     position: relative;
 
-    margin-top: 10px;
     width: 150px;
     height: 50px;
     border-radius: 15px;
+}
+
+#second .more:hover {
+    background: var(--aCol01A);
+}
+
+#second .more ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+#second .more ul li {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: var(--E01);
+    color: rgb(2, 2, 2);
 }

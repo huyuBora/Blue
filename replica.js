@@ -4,7 +4,7 @@ window.addEventListener("scroll", windowScroll);
 function windowScroll(){
     let coverOP = document.getElementById("cover").querySelector(".coverOP");
     if(window.pageYOffset >= 120){
-        coverOP.style.opacity = 0.8;
+        coverOP.style.opacity = 0.9;
     }else{
         coverOP.style.opacity = 0.6;
     }
@@ -230,11 +230,8 @@ function moreEvent(){
         console.log(num);
         switch (num) {
             case 1:
-                console.log("하나");
-                let intD = document.getElementById("second").querySelectorAll(".intD");
-                for (let i = 0; i < intD.length; i++) {
-                    intD[i].style.display = "black";
-                }
+                let intBoxA = document.getElementById("second").querySelector(".intBoxA");
+                intBoxA.classList.add("mor");
                 break;
             case 2:
                 console.log("둘");
