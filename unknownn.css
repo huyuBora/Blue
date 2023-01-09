@@ -455,6 +455,7 @@
     transition-property: left, opacity;
     transition-duration: 1s;
 }
+
 #second.section.Map .title {
     left: 0px;
     opacity: 1;
@@ -481,8 +482,7 @@
     width: 100%;
 }
 
-#second .intBox .intA,
-#second .intBoxA .intA {
+#second .intBox .intA {
     backdrop-filter: blur(50px);
     position: relative;
 
@@ -500,22 +500,8 @@
     overflow: hidden;
 }
 
-#second .intBox .intA:nth-child(1).Soop {
-    height: 500px;
-}
-#second .intBox .intA:nth-child(2).Soop {
-    height: 750px;
-}
-#second .intBox .intA:nth-child(3).Soop {
-    height: 3120px;
-}
-#second .intBox .intA:nth-child(4).Soop {
-    height: 820px;
-}
-
 /** intb **/
-#second .intBox .intA .intB,
-#second .intBoxA .intA .intB {
+#second .intBox .intA .intB {
     cursor: pointer;
     position: relative;
     display: flex;
@@ -530,14 +516,17 @@
     transition-property: opacity;
     transition-duration: 1s;
 }
-#second .intBox .intA .intB:hover
-#second .intBoxA .intA .intB:hover {
+
+#second .intBoxA .intA .intB {
+    height: 0px;
+}
+
+#second .intBox .intA .intB:hover {
     opacity: 0.8;
 }
 
 /****/
-#second .intBox .intA .intB .intBDay,
-#second .intBoxA .intA .intB .intBDay {
+#second .intBox .intA .intB .intBDay {
     position: relative;
     display: flex;
     flex: 1 1 0;
@@ -551,8 +540,7 @@
     line-height: 13px;
 }
 
-#second .intBox .intA .intB .intBDay ul,
-#second .intBoxA .intA .intB .intBDay ul {
+#second .intBox .intA .intB .intBDay ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -560,15 +548,13 @@
     align-items: center;
 }
 
-#second .intBox .intA .intB .intBDay ul li:nth-child(2),
-#second .intBoxA .intA .intB .intBDay ul li:nth-child(2) {
+#second .intBox .intA .intB .intBDay ul li:nth-child(2) {
     font-size: 14px;
     letter-spacing: 1px;
 }
 
 /****/
-#second .intBox .intA .intB .intBTitle,
-#second .intBoxA .intA .intB .intBTitle {
+#second .intBox .intA .intB .intBTitle {
     position: relative;
     display: flex;
     flex: 9 1 0;
@@ -579,8 +565,7 @@
     font-size: 13px;
 }
 
-#second .intBox .intA .intB .intBTitle ul,
-#second .intBoxA .intA .intB .intBTitle ul {
+#second .intBox .intA .intB .intBTitle ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -591,8 +576,7 @@
 }
 
 /****/
-#second .intBox .intA .intC,
-#second .intBoxA .intA .intC {
+#second .intBox .intA .intC {
     position: relative;
 
     top: 0;
@@ -607,27 +591,12 @@
     transition-duration: 1s;
 }
 
-#second .intBox .intA.Soop .intC,
-#second .intBoxA .intA.Soop .intC {
+#second .intBox .intA.Soop .intC {
     opacity: 1;
     visibility: visible;
 }
 
-#second .intBox .intA:nth-child(1) .intC {
-    height: calc(500px - 80px);
-}
-#second .intBox .intA:nth-child(2) .intC {
-    height: calc(750px - 80px);
-}
-#second .intBox .intA:nth-child(3) .intC {
-    height: calc(3120px - 80px);
-}
-#second .intBox .intA:nth-child(4) .intC {
-    height: calc(820px - 80px);
-}
-
-#second .intBox .intA .intC ul,
-#second .intBoxA .intA .intC ul {
+#second .intBox .intA .intC ul {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -639,52 +608,20 @@
     font-size: 13px;
     font-family: var(--J01);
     font-weight: 600;
+
     color: var(--aCol01);
     line-height: 20px;
 
     opacity: 0.6;
 }
 
-#second .intBox .intA .intC ul li a,
-#second .intBoxA .intA .intC ul li a {
+#second .intBox .intA .intC ul li a {
     font-size: 13px;
     font-family: var(--J01);
     font-weight: 600;
+
     color: var(--aCol01);
     line-height: 20px;
-}
-
-/** intD A **/
-#second .intBoxA {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-
-    margin-top: 10px;
-    width: 100%;
-    height: 0px;
-
-    transition-property: height;
-    transition-duration: 1s;
-}
-
-#second .intBoxA.mor {
-    height: 100%;
-}
-
-#second .intBoxA .intA {
-    opacity: 0;
-    visibility: hidden;
-
-    transition-property: opacity, visibility;
-    transition-duration: 1s;
-}
-
-#second .intBoxA.mor .intA {
-    opacity: 1;
-    visibility: visible;
 }
 
 /** more **/
@@ -694,7 +631,12 @@
 
     width: 150px;
     height: 50px;
+    border: 2px solid var(--aCol01C);
     border-radius: 15px;
+    box-sizing: border-box;
+
+    transition-property: background;
+    transition-duration: 1s;
 }
 
 #second .more:hover {
@@ -711,8 +653,8 @@
 }
 
 #second .more ul li {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
-    font-family: var(--E01);
-    color: rgb(2, 2, 2);
+    font-family: var(--E02);
+    color: rgb(0, 0, 0);
 }

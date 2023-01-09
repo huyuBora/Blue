@@ -234,10 +234,8 @@ function moreEvent(){
                 intBoxA.classList.add("mor");
                 break;
             case 2:
-                console.log("둘");
                 break;
             case 3:
-                console.log("셋");
                 break;
             default:
                 break;

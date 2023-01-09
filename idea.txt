@@ -26,3 +26,9 @@
     moveTxt*
     ToMenuEvent*
     moreEvent* ( 진행중 )
+
+----- 0106
+    unber*
+
+----- 0109
+    second 전부 수정.
