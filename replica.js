@@ -29,6 +29,7 @@ function sectionEvent(){
     sectionA.observe(section[0]);
     sectionA.observe(section[1]);
     sectionA.observe(section[2]);
+    sectionA.observe(section[3]);
 }
 sectionEvent();
 
@@ -105,22 +106,20 @@ function moveTxtEvent(){
                         block : "center"
                     });
                     break;
-                    /**
-                case moveTxt[]:
-                    document.getElementById("").scrollIntoView({
+                case moveTxt[1]:
+                    document.getElementById("third").scrollIntoView({
                         behavior : "smooth",
-                        inline : "start",
-                        block : "start"
+                        inline : "center",
+                        block : "center"
                     });
                     break;
-                case moveTxt[]:
-                    document.getElementById("").scrollIntoView({
+                case moveTxt[11]:
+                    document.getElementById("third").scrollIntoView({
                         behavior : "smooth",
-                        inline : "start",
-                        block : "start"
+                        inline : "center",
+                        block : "center"
                     });
                     break;
-                     */
                 default:
                     break;
             }
@@ -131,7 +130,7 @@ moveTxtEvent();
 
 /** ToMenu **/
 function ToMenuEvent(){
-    let firstList = document.getElementById("first").querySelector(".firstList");
+    let first = document.getElementById("first");
     let ToMenu = document.getElementById("ToMenu");
 
     let ToMenuView = new IntersectionObserver ((ToMenuA)=>{
@@ -145,7 +144,7 @@ function ToMenuEvent(){
         });
     });
 
-    ToMenuView.observe(firstList);
+    ToMenuView.observe(first);
 
     let ToMenuBtnBox = document.getElementById("ToMenu").querySelector(".ToMenuBtnBox");
     ToMenuBtnBox.addEventListener("click", function(){
@@ -238,6 +237,7 @@ function moreEvent(){
             case 3:
                 break;
             default:
+                
                 break;
         }
     }

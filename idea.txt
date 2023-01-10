@@ -32,3 +32,6 @@
 
 ----- 0109
     second 전부 수정.
+
+----- 1010
+    transition: all .35s ease-in .3s;

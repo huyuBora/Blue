@@ -122,18 +122,21 @@
     z-index: 1000;
     position: fixed;
 
-    top: -92px;
+    top: -250px;
     left: 50%;
     transform: translateX(-50%);
 
     width: 100%;
 
     transition-property: top;
-    transition-duration: 1s;
+    transition-duration: 2s;
 }
 
 #ToMenu.ToMenuOpen {
     top: -62px;
+
+    transition-property: top;
+    transition-duration: 1s;
 }
 
 #ToMenu.ToMenuOpen.ab {
@@ -239,9 +242,6 @@
     font-size: 26px;
     color: var(--aCol01B);
 }
-
-
-
 
 /** first **/
 #first {
@@ -441,35 +441,6 @@
     margin-top: 50px;
 }
 
-/** second title **/
-#second .title {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    left: -50px;
-    height: 50px;
-    opacity: 0;
-
-    transition-property: left, opacity;
-    transition-duration: 1s;
-}
-
-#second.section.Map .title {
-    left: 0px;
-    opacity: 1;
-}
-
-#second .title h1 {
-    font-family: var(--E01);
-    font-weight: 600;
-    font-size: 24px;
-    letter-spacing: 2px;
-
-    color: var(--aCol02);
-}
-
 /** second intBox **/
 #second .intBox {
     position: relative;
@@ -657,4 +628,215 @@
     font-weight: 600;
     font-family: var(--E02);
     color: rgb(0, 0, 0);
+}
+
+/** third **/
+#third {
+    background: var(--aCol01C);
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 50px;
+}
+
+#third .int {
+    position: relative;
+    
+    padding: 10px 50px;
+    box-sizing: border-box;
+}
+
+#third .int ul {
+    position: relative;
+    text-align: center;
+}
+
+#third .int ul li {
+    font-size: 13px;
+    font-family: var(--J01);
+    font-weight: 600;
+    color: var(--aCol01B);
+
+    line-height: 30px;
+}
+
+/** fourth **/
+#fourth {
+    background: #2b2b2b;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 50px;
+}
+
+/** disBox **/
+#fourth .disBox {
+    position: relative;
+
+    width: 1024px;
+}
+
+/****/
+#fourth .disBox .disBundle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    margin-bottom: 10px;
+}
+
+/****/
+#fourth .disBox .disBundle .disPhoto {
+    position: relative;
+
+    width: calc(400px);
+    height: 800px;
+}
+
+#fourth .disBox .disBundle .disPhoto .path {
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+
+    overflow: hidden;
+}
+
+#fourth .disBox .disBundle .disPhoto .path .pathP {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#fourth .disBox .disBundle .disPhoto .path .pathP:hover {
+    transform: scale(1.1);
+}
+
+/****/
+#fourth .disBox .disBundle:nth-child(1) .disPhoto .path .pathP {
+    background: url(/Blue/Photo/dicography__01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#fourth .disBox .disBundle:nth-child(2) .disPhoto .path .pathP {
+    background: url(/Blue/Photo/dicography__02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/****/
+#fourth .disBox .disBundle .disPhoto .shd {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice {
+    position: relative;
+    background: var(--aCol02);
+
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice a::after {
+    content: "";
+    background: #141414;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice a:hover::after {
+    width: 100%;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice a ul {
+    position: relative;
+    display: flex;
+
+    width: 100%;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice a ul li {
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(78, 78, 78);
+
+    transition-property: color;
+    transition-duration: 2s;
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice:hover a ul li {
+    color: var(--aCol02);
+}
+
+#fourth .disBox .disBundle .disPhoto .shd .choice a ul li:nth-child(1) {
+    flex: 9 1 0;
+
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--E02);
+}
+#fourth .disBox .disBundle .disPhoto .shd .choice a ul li:nth-child(2) {
+    flex: 1 1 0;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+
+
+/****/
+#fourth .disBox .disBundle .disTxt {
+    position: relative;
+
+    width: calc(100% - 400px);
+    height: 700px;
 }

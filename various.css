@@ -1,3 +1,32 @@
+/** section title **/
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: -50px;
+    height: 100px;
+    opacity: 0;
+
+    transition-property: left, opacity;
+    transition-duration: 1s;
+}
+
+.section.Map .title {
+    left: 0px;
+
+    opacity: 0.5;
+}
+
+.title h1 {
+    font-family: var(--E02);
+    font-size: 26px;
+    letter-spacing: 1px;
+
+    color: var(--aCol02);
+}
+
 /****/
 #second .intBox .intA:nth-child(1).Soop {
     height: 500px;
@@ -55,12 +84,6 @@
 }
 
 /****/
-#second .intBoxA {
-    display: none;
-
-    overflow: hidden;
-}
-
 #second .intBoxA.mor {
     position: relative;
     display: flex;
@@ -90,6 +113,11 @@
     overflow: hidden;
 }
 
+#second .intBoxA .intA {
+    height: 0;
+    overflow: hidden;
+}
+
 /** intb **/
 #second .intBoxA.mor .intA .intB {
     cursor: pointer;
@@ -105,10 +133,6 @@
 
     transition-property: opacity;
     transition-duration: 1s;
-}
-
-#second .intBoxA.mor .intA .intB {
-    height: 0px;
 }
 
 #second .intBoxA.mor .intA .intB:hover {
