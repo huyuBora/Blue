@@ -698,7 +698,7 @@
     padding: 0 10px;
     box-sizing: border-box;
 
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 /****/
@@ -706,7 +706,7 @@
     position: relative;
 
     width: calc(400px);
-    height: 800px;
+    height: 700px;
 }
 
 #fourth .disBox .disBundle .disPhoto .path {
@@ -745,6 +745,12 @@
     background-size: 100% 100%;
 }
 
+#fourth .disBox .disBundle:nth-child(3) .disPhoto .path .pathP {
+    background: url(/Blue/Photo/dicography__03.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 /****/
 #fourth .disBox .disBundle .disPhoto .shd {
     position: relative;
@@ -761,7 +767,7 @@
     background: var(--aCol02);
 
     width: 250px;
-    height: 50px;
+    height: 40px;
     margin-top: 10px;
 }
 
@@ -831,12 +837,388 @@
     font-weight: 600;
 }
 
-
-
 /****/
 #fourth .disBox .disBundle .disTxt {
     position: relative;
 
     width: calc(100% - 400px);
     height: 700px;
+}
+
+/****/
+#fourth .disBox .disBundle .disTxt .disMore {
+    z-index: 1;
+    background: var(--aCol02);
+    position: absolute;
+
+    top: 0px;
+    right: 10px;
+    width: 100px;
+    height: 30px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    color: #141414;
+
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a:hover {
+    color: var(--aCol02);
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a::after {
+    content: "";
+    z-index: 1;
+    background: #141414;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a:hover::after {
+    width: 100%;
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a ul {
+    position: relative;
+    display: flex;
+
+    height: 100%;
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a ul li {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fourth .disBox .disBundle .disTxt .disMore a ul li:nth-child(1) {
+    flex: 8 1 0;
+
+    font-family: var(--E02);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+#fourth .disBox .disBundle .disTxt .disMore a ul li:nth-child(2) {
+    flex: 2 1 0;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/****/
+#fourth .disBox .disBundle .disTxt .TxtTitle {
+    position: relative;
+
+    width: 100%;
+    height: 150px;
+    
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtTitle ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+
+    height: 100%;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtTitle ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    color: var(--aCol02);
+    font-family: var(--J02);
+    font-weight: 600;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtTitle ul li:nth-child(1) {
+    flex: 6 1 0;
+
+    font-size: 42px;
+
+    line-height: 40px;
+}
+#fourth .disBox .disBundle .disTxt .TxtTitle ul li:nth-child(n+2) {
+    flex: 2 1 0;
+
+    font-size: 26px;
+}
+
+/****/
+#fourth .disBox .disBundle .disTxt .TxtLine {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtLine ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtLine ul li:nth-child(1),
+#fourth .disBox .disBundle .disTxt .TxtLine ul li:nth-child(3) {
+    background: var(--aCol02);
+    position: relative;
+    display: flex;
+    flex: 4 1 0;
+    width: 100%;
+    height: 2px;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtLine ul li:nth-child(2) {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    color: var(--aCol02);
+    font-weight: 600;
+    font-family: var(--J01);
+    font-size: 16px;
+}
+
+/****/
+#fourth .disBox .disBundle .disTxt .TxtAlbum {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList {
+    position: relative;
+    display: flex;
+
+    margin-bottom: 2px;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    
+    height: 55px;
+}
+
+/****/
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList ul:nth-child(1) {
+    flex: 1 1 0;
+    align-items: center;
+
+    background-color: #141414;
+
+    margin-right: 2px;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList ul:nth-child(1) li {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--E02);
+
+    color: var(--aCol02);
+}
+
+/****/
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList ul:nth-child(2) {
+    flex: 9 1 0;
+
+    background-color: #141414;
+    color: var(--aCol02);
+
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    line-height: 16px;
+}
+
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList ul:nth-child(2) li:nth-child(1) {
+    font-size: 16px;
+    font-weight: 600;
+
+    font-family: var(--E01);
+
+}
+#fourth .disBox .disBundle .disTxt .TxtAlbum .TxtAlbumList ul:nth-child(2) li:nth-child(n+2) {
+    font-size: 12px;
+
+    font-family: var(--J02);
+}
+
+/**
+<!---->
+                    <div class="disBundle">
+                        <!---->
+                        <div class="disPhoto">
+                            <!---->
+                            <div class="path">
+                                <div class="pathP"></div>
+                            </div>
+                            <!-- shd -->
+                            <div class="shd">
+                                <!-- cd shop -->
+                                <div class="choice">
+                                    <a href="#none">
+                                        <ul>
+                                            <li>CD Shop</li>
+                                            <li><i class='bx bx-right-arrow-alt'></i></li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="disTxt">
+                            <!-- more -->
+                            <div class="disMore">
+                                <a href="#none">
+                                    <ul>
+                                        <li>more</li>
+                                        <li><i class='bx bx-right-arrow-alt'></i></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="TxtTitle">
+                                <ul>
+                                    <li>
+                                        <br>
+                                        </li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <!-- line -->
+                            <div class="TxtLine">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <!-- album -->
+                            <div class="TxtAlbum">
+                                <!---->
+                                <div class="TxtAlbumList">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="TxtAlbumList">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="TxtAlbumList">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="TxtAlbumList">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="TxtAlbumList">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <div class="TxtAlbumList">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+**/
+
+/****/
+#fourth .disBox .disYoutube {
+    background: sandybrown;
+    position: relative;
+
+    width: 100%;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+#fourth .disBox .disYoutube .youtubeLink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -120,6 +120,20 @@ function moveTxtEvent(){
                         block : "center"
                     });
                     break;
+                case moveTxt[2]:
+                    document.getElementById("fourth").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
+                case moveTxt[12]:
+                    document.getElementById("fourth").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
                 default:
                     break;
             }
