@@ -718,6 +718,10 @@
     overflow: hidden;
 }
 
+#fourth .disBox .disBundle:nth-child(3) .disPhoto .path {
+    height: 300px;
+}
+
 #fourth .disBox .disBundle .disPhoto .path .pathP {
     position: relative;
 
