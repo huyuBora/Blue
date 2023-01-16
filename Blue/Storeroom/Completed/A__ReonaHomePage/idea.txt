@@ -1,18 +1,16 @@
-        HomePage 끝까지 깔끔하게 완성해보기.
-
------ 0101
+----- 
     설정
 
------ 0102
+----- 
     ToBtn Event*
 
         IntersectionObserver* observe*
         scrollIntoView*
 
------ 0103
+----- 
     information* 클래스 추가가 계속 안 됨.
 
------ 0104
+----- 
     information* 이틀에 걸쳐서 완료.
         2번 실행이 되면서 적용이 안 됬었던 거임...
         이거때매 몇일을 계속 찾고 수정하고 했는데... console.log(); 를 쓰고 찾음.
@@ -22,18 +20,27 @@
         parentNode*
         contains*
 
------ 0105
+----- 
     moveTxt*
     ToMenuEvent*
     moreEvent* ( 진행중 )
 
------ 0106
+----- 
     unber*
 
------ 0109
+----- 
     second 전부 수정.
 
------ 0110
+----- 
     transition: all .35s ease-in .3s;
 
------ 0111
+-----
+    얼추 어느정도는 틀은 완성.
+        @media 설정은 1024width 이상으로만 만듦.
+
+    여기서 더 꾸미고 깔끔하게 하면 더 괜찮고 이쁠 듯.
+
+    다음에는 코드를 더 간략하게(?)
+        좀 더 깔끔하게 하기.
+
+    다음번에는 디자인이랑 반응형까지 마무리하기.

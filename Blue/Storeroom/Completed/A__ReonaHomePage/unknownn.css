@@ -1201,9 +1201,270 @@
 
 /** fifth **/
 #fifth {
-    background: var(--aCol01C);
     position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 
     width: 100%;
-    height: 100vh;
+}
+
+#fifth .fifthBox {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    width: 1024px;
+
+    font-family: var(--J01);
+    font-weight: 600;
+    color: var(--aCol02);
+
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/** mini title **/
+#fifth .fifthBox .fifthMinititle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100px;
+
+    font-size: 16px;
+
+    margin-top: 0px;
+
+    opacity: 0.8;
+}
+
+#fifth .fifthBox .fifthMinititle ul {
+    position: relative;
+    width: 90%;
+}
+
+#fifth .fifthBox .fifthInt {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+#fifth .fifthBox .fifthInt ul {
+    position: relative;
+    width: 80%;
+
+    opacity: 0.8;
+}
+
+#fifth .fifthBox .fifthInt ul li a {
+    color: var(--aCol02);
+    font-size: 13px;
+}
+
+#fifth .fifthBox .fifthInt ul li span {
+    color: rgb(189, 95, 95);
+    position: relative;
+    left: 5px;
+    font-weight: 900;
+    font-family: var(--E02);
+}
+
+/****/
+#fifth .fifthBox .fifthMore {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#fifth .fifthBox .fifthMore a {
+    background: var(--aCol02);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+
+    color: #141414;
+    font-family: var(--E02);
+    font-size: 18px;
+
+    border-radius: 5px;
+}
+
+/****/
+#sixth {
+    background: #2b2b2b;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sixth .mediaInt {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+#sixth .mediaInt .mediaIntBox {
+    position: relative;
+    display: flex;
+
+    width: 800px;
+    margin-bottom: 2px;
+}
+
+/****/
+#sixth .mediaInt .mediaIntBox .mediaIntTitle {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 0;
+}
+
+#sixth .mediaInt .mediaIntBox .mediaIntTitle ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 2px;
+}
+
+#sixth .mediaInt .mediaIntBox .mediaIntTitle ul:nth-child(1) {
+    background: var(--aCol02);
+
+    flex-flow: column;
+    flex: 3 1 0;
+
+    font-family: var(--E02);
+    font-size: 16px;
+    line-height: 11px;
+}
+
+#sixth .mediaInt .mediaIntBox .mediaIntTitle ul:nth-child(1) li:nth-child(1) {
+    font-size: 12px;
+}
+
+#sixth .mediaInt .mediaIntBox .mediaIntTitle ul:nth-child(2) {
+    background: #141414;
+    flex: 7 1 0;
+
+    font-family: var(--J02);
+    font-size: 16px;
+
+    color: var(--aCol02);
+}
+
+/****/
+#sixth .mediaInt .mediaIntBox .mediaIntList {
+    background: #141414;
+    position: relative;
+    display: flex;
+    flex: 7 1 0;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--aCol02);
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 30px;
+
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+/**
+<!-- 03 -->
+                    <div class="mediaIntBox">
+                        <!---->
+                        <div class="mediaIntTitle">
+                            <ul>
+                                <li>2022</li>
+                                <li>12.21</li>
+                            </ul>
+                            <ul>
+                                <li>ラジオ</li>
+                            </ul>
+                        </div>
+                        <!---->
+                        <div class="mediaIntList">
+                            <ul>
+                                <li>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+**/
+
+#sixth .sixthMore {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+#sixth .sixthMore h1 {
+    background: var(--aCol02);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 40px;
+
+    font-size: 18px;
+    font-family: var(--E02);
+    font-weight: 600;
+    color: var(#141414);
+
+    border-radius: 5px;
+}
+
+#sixth .mediaInt .mediaIntOver {
+    position: relative;
+
+    height: 0;
+}
+
+#sixth .mediaInt .mediaIntOver.op {
+    height: 100%;
+}
+
+#sixth .mediaInt .mediaIntOver .mediaIntBox {
+    height: 0px;
+    overflow: hidden;
+
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+#sixth .mediaInt .mediaIntOver.op .mediaIntBox {
+    height: 100%;
 }

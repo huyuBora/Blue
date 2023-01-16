@@ -30,6 +30,8 @@ function sectionEvent(){
     sectionA.observe(section[1]);
     sectionA.observe(section[2]);
     sectionA.observe(section[3]);
+    sectionA.observe(section[4]);
+    sectionA.observe(section[5]);
 }
 sectionEvent();
 
@@ -129,6 +131,20 @@ function moveTxtEvent(){
                     break;
                 case moveTxt[12]:
                     document.getElementById("fourth").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
+                case moveTxt[3]:
+                    document.getElementById("fifth").scrollIntoView({
+                        behavior : "smooth",
+                        inline : "start",
+                        block : "start"
+                    });
+                    break;
+                case moveTxt[13]:
+                    document.getElementById("fifth").scrollIntoView({
                         behavior : "smooth",
                         inline : "start",
                         block : "start"
@@ -238,9 +254,8 @@ function moreEvent(){
     let more = document.getElementById("second").querySelector(".more");
     more.addEventListener("click", moreClick);
     
-    function moreClick(itemClick){
+    function moreClick(){
         num += 1;
-        console.log(num);
         switch (num) {
             case 1:
                 let intBoxA = document.getElementById("second").querySelector(".intBoxA");
@@ -257,6 +272,32 @@ function moreEvent(){
     }
 }
 moreEvent();
+
+function sixthEvent(){
+    let num = 0;
+
+    let sixthMore = document.getElementById("sixth").querySelector(".sixthMore > h1");
+    let mediaIntOver = document.getElementById("sixth").querySelectorAll(".mediaIntOver");
+    sixthMore.addEventListener("click", sixthMoreEvent);
+    
+    function sixthMoreEvent(){
+        num += 1;
+        for (let i = 0; i < mediaIntOver.length; i++) {
+            switch (num) {
+                case 1:
+                    mediaIntOver[0].classList.add("op");
+                    break;
+                case 2:
+                    mediaIntOver[1].classList.add("op");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}
+sixthEvent();
 /** 
 console.log();
 */
+
