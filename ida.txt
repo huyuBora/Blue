@@ -1,0 +1,5 @@
+-----
+    menu* toggle border 1px
+        // baackground color none
+
+    addEvent resize width-1024px [ scroll section event ]
