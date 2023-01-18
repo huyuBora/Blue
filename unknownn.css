@@ -6,6 +6,19 @@
     height: 100%;
 }
 
+/** container **/
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /** media width **/
+    height: 100%;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
 /** main **/
 #main {
     background: url(/Blue/Photo/reonaPhoto--01.jpg);
@@ -34,7 +47,48 @@
 /** first **/
 #first {
     position: relative;
+    display: flex;
+    justify-content: center;
 
     width: 100%;
     height: 100vh;
+}
+
+/** btnLogo **/
+#first .btnLogo {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    top: 50%;
+    transform: translateY(-50%);
+    width: 210px;
+    height: 380px;
+    left: 5px;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+
+#first .btnLogo .btnLink {
+    position: relative;
+
+    left: -250px;
+    width: 200px;
+    height: 60px;
+
+    transition-property: left;
+    transition-duration: 1s;
+}
+#first .btnLogo .btnLink:nth-child(1) {
+    height: 120px;
+}
+
+#first .btnLogo .btnLink a {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
 }
