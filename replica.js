@@ -106,23 +106,39 @@ function blueEvent(){
 
     /****/
     let first = document.getElementById("first");
-
-
-    
     let fiMenu = document.getElementById("first").querySelector(".fiMenu");
-    let firstListBox = document.getElementById("first").querySelector(".list");
-    let firstList = document.getElementById("first").querySelectorAll(".list > ul > li");
-    let firstListView = new IntersectionObserver((firstFor)=>{
+    let fiMenuBtn = document.getElementById("first").querySelector(".fiMenuBtn > i");
+    
+    let firstView = new IntersectionObserver((firstFor)=>{
         firstFor.forEach((firstListA)=>{
             if(!firstListA.isIntersecting){
                 fiMenu.classList.add("neb");
-            }else{
+                let fiMenuNeb = fiMenu.classList.contains("neb");
+                if(fiMenuNeb){
+                    fiMenuBtn.addEventListener("click", ()=>{
+                        let fiClick = fiMenu.classList.contains("fiClick");
+                        if(!fiClick){
+                            fiMenu.classList.toggle("fiClick");
+                            console.log("aa");
+                        }else if(fiClick){
+                            fiMenu.classList.remove("fiClick");
+                        }
+                    });
+                }
+            }else if(firstListA.isIntersecting){
                 fiMenu.classList.remove("neb");
+                fiMenu.classList.remove("fiClick");
+                console.log("bb");
             }
         })
     })
-
-    firstListView.observe(first);
+    firstView.observe(first);
+    
+    
+    /**
+    fiMenuBtn.addEventListener("click", ()=>{
+        console.log(fiMenuNeb);
+    });
+    **/
 }
 blueEvent();
-let firstList = document.getElementById("first").querySelectorAll(".list > ul > li");

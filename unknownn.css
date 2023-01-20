@@ -91,81 +91,86 @@
     height: 120px;
 }
 
-/** menu **/
+/** fi menu **/
 #first .fiMenu {
+    z-index: 10;
     position: absolute;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
 
-    bottom: 0;
+    bottom: -30px;
     width: 100%;
+
+    transition-property: top;
+    transition-duration: 1s;
 }
 
 #first .fiMenu.neb {
     position: fixed;
 
-    top: 0px;
-    bottom: auto;
+    top: -42px;
 }
 
-/** logo **/
-#first .fiMenu .logo {
+#first .fiMenu.neb.fiClick {
+    top: 0px;
+}
+
+/****/
+#first .fiMenu .fiMenuBox {
     position: relative;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
+    top: 0;
 }
 
-#first .fiMenu.neb .logo {
-    height: 0px;
+/****/
+#first .fiMenu .fiMenuBox .logo {
+    position: relative;
 
+    width: 300px;
+    height: 100px;
+}
+
+#first .fiMenu.neb .fiMenuBox .logo {
+    height: 0;
     opacity: 0;
     visibility: hidden;
 }
 
-#first .fiMenu .logo img {
+#first .fiMenu .fiMenuBox .logo img {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    
     position: relative;
-    width: 260px;
-    height: 100px;
 
-    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.2;
 }
 
-/** list **/
-#first .fiMenu .list {
+/****/
+#first .fiMenu .fiMenuBox .list {
     position: relative;
 
     width: 100%;
 }
 
-#first .fiMenu .list ul {
+#first .fiMenu .fiMenuBox .list ul {
     position: relative;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
-    height: 100%;
+    width: 100%;
 }
 
-#first .fiMenu.neb .list ul {
+#first .fiMenu.neb .fiMenuBox .list ul {
     backdrop-filter: blur(10px);
-
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-
-    border-bottom: 2px solid rgb(197, 180, 180, 0.3);
+    border-bottom: 2px solid var(--aCol01B);
 }
 
-#first .fiMenu .list ul li {
+#first .fiMenu .fiMenuBox .list ul li {
     position: relative;
     display: flex;
     justify-content: center;
@@ -173,53 +178,70 @@
 
     width: 100px;
     height: 30px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin: 5px 0px 5px 0px;
 
     font-family: 'Indie Flower', cursive;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
 
-    color: rgb(197, 180, 180);
-
-    opacity: 0.4;
+    color: var(--aCol01B);
 }
 
-/** fiMenuBtn **/
+/****/
+
+/****/
+
+/****/
+
+/****/
 #first .fiMenu .fiMenuBtn {
-    position: relative;
-
-    width: 80px;
-    height: 0px;
-    border-radius: 0px 0px 10px 10px;
-    border-width: 0px 2px 2px 2px;
-    border-color: rgb(197, 180, 180, 0.3);
-    border-style: solid;
-
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-}
-
-#first .fiMenu.neb .fiMenuBtn {
-    height: 30px;
-
-    opacity: 1;
-    visibility: visible;
-}
-
-#first .fiMenu .fiMenuBtn i {
-    backdrop-filter: blur(10px);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 100%;
-    height: 100%;
-    font-size: 24px;
-    color: rgb(197, 180, 180);
+    height: 30px;
 
-    opacity: 0.4;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#first .fiMenu.neb .fiMenuBtn {
+    opacity: 1;
+    visibility: visible;
+}
+
+#first .fiMenu .fiMenuBtn i {
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    width: 80px;
+    height: 0px;
+    border-radius: 0px 0px 10px 10px;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    border-color: var(--aCol01B);
+
+    font-size: 21px;
+    color: var(--aCol01B);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#first .fiMenu.neb .fiMenuBtn i {
+    height: 30px;
+    
+    opacity: 1;
+    visibility: visible;
 }
