@@ -91,8 +91,45 @@
     height: 120px;
 }
 
-/** fi menu **/
-#first .fiMenu {
+/** fi menu R **/
+#first .fiMenuR {
+    background: saddlebrown;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+}
+
+#first .fiMenuR .fiMenuBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#first .fiMenuR .fiMenuBox .logo {
+    transform: rotate(270deg);
+    position: relative;
+
+    width: 300px;
+    height: 100px;
+}
+
+#first .fiMenuR .fiMenuBox .logo img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/** fi menu B **/
+#first .fiMenuB {
     z-index: 10;
     position: absolute;
 
@@ -103,18 +140,18 @@
     transition-duration: 1s;
 }
 
-#first .fiMenu.neb {
+#first .fiMenuB.neb {
     position: fixed;
 
     top: -42px;
 }
 
-#first .fiMenu.neb.fiClick {
+#first .fiMenuB.neb.fiClick {
     top: 0px;
 }
 
 /****/
-#first .fiMenu .fiMenuBox {
+#first .fiMenuB .fiMenuBox {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -125,20 +162,20 @@
 }
 
 /****/
-#first .fiMenu .fiMenuBox .logo {
+#first .fiMenuB .fiMenuBox .logo {
     position: relative;
 
     width: 300px;
     height: 100px;
 }
 
-#first .fiMenu.neb .fiMenuBox .logo {
+#first .fiMenuB.neb .fiMenuBox .logo {
     height: 0;
     opacity: 0;
     visibility: hidden;
 }
 
-#first .fiMenu .fiMenuBox .logo img {
+#first .fiMenuB .fiMenuBox .logo img {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
@@ -150,13 +187,13 @@
 }
 
 /****/
-#first .fiMenu .fiMenuBox .list {
+#first .fiMenuB .fiMenuBox .list {
     position: relative;
 
     width: 100%;
 }
 
-#first .fiMenu .fiMenuBox .list ul {
+#first .fiMenuB .fiMenuBox .list ul {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -165,12 +202,12 @@
     width: 100%;
 }
 
-#first .fiMenu.neb .fiMenuBox .list ul {
+#first .fiMenuB.neb .fiMenuBox .list ul {
     backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--aCol01B);
 }
 
-#first .fiMenu .fiMenuBox .list ul li {
+#first .fiMenuB .fiMenuBox .list ul li {
     position: relative;
     display: flex;
     justify-content: center;
@@ -189,13 +226,7 @@
 }
 
 /****/
-
-/****/
-
-/****/
-
-/****/
-#first .fiMenu .fiMenuBtn {
+#first .fiMenuB .fiMenuBtn {
     position: relative;
     display: flex;
     justify-content: center;
@@ -208,12 +239,12 @@
     visibility: hidden;
 }
 
-#first .fiMenu.neb .fiMenuBtn {
+#first .fiMenuB.neb .fiMenuBtn {
     opacity: 1;
     visibility: visible;
 }
 
-#first .fiMenu .fiMenuBtn i {
+#first .fiMenuB .fiMenuBtn i {
     z-index: 10;
     backdrop-filter: blur(10px);
     position: relative;
@@ -239,7 +270,7 @@
     transition-duration: 1s;
 }
 
-#first .fiMenu.neb .fiMenuBtn i {
+#first .fiMenuB.neb .fiMenuBtn i {
     height: 30px;
     
     opacity: 1;

@@ -106,42 +106,29 @@ function blueEvent(){
 
     /****/
     let first = document.getElementById("first");
-    let fiMenu = document.getElementById("first").querySelector(".fiMenu");
+    let fiMenuB = document.getElementById("first").querySelector(".fiMenuB");
     let fiMenuBtn = document.getElementById("first").querySelector(".fiMenuBtn > i");
     
     let firstView = new IntersectionObserver((firstFor)=>{
         firstFor.forEach((firstListA)=>{
             if(!firstListA.isIntersecting){
-                fiMenu.classList.add("neb");
-                let fiMenuNeb = fiMenu.classList.contains("neb");
-                if(fiMenuNeb){
-                    fiMenuBtn.addEventListener("click", ()=>{
-                        let fiClick = fiMenu.classList.contains("fiClick");
-                        if(!fiClick){
-                            fiMenu.classList.toggle("fiClick");
-                            console.log("aa");
-                            
-                        }else if(fiClick){
-                            fiMenu.classList.remove("fiClick");
-                        }
-                    });
-                }
-                return;
-            }else if(firstListA.isIntersecting){
-                fiMenu.classList.remove("neb");
-                fiMenu.classList.remove("fiClick");
+                fiMenuB.classList.add("neb");
+                console.log("aa");
+            }else{
+                fiMenuB.classList.remove("neb");
+                fiMenuB.classList.remove("fiClick");
                 console.log("bb");
-                return;
             }
         })
     })
     firstView.observe(first);
-    
-    
-    /**
-    fiMenuBtn.addEventListener("click", ()=>{
-        console.log(fiMenuNeb);
+    fiMenuBtn.addEventListener("click", function(){
+        let fiClick = fiMenuB.classList.contains("fiClick");
+        if(!fiClick){
+            fiMenuB.classList.add("fiClick");
+        }else if(fiClick){
+            fiMenuB.classList.remove("fiClick");
+        }
     });
-    **/
 }
 blueEvent();
