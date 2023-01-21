@@ -120,15 +120,18 @@ function blueEvent(){
                         if(!fiClick){
                             fiMenu.classList.toggle("fiClick");
                             console.log("aa");
+                            
                         }else if(fiClick){
                             fiMenu.classList.remove("fiClick");
                         }
                     });
                 }
+                return;
             }else if(firstListA.isIntersecting){
                 fiMenu.classList.remove("neb");
                 fiMenu.classList.remove("fiClick");
                 console.log("bb");
+                return;
             }
         })
     })
