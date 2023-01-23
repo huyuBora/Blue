@@ -1,0 +1,247 @@
+/** under **/
+
+/** main **/
+#main {
+    background: url(/Blue/Photo/reonaPhoto--01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#main .cover {
+    background: #000;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.6;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+/** container **/
+.container {
+    position: relative;
+
+    height: 100%;
+    /** widrh media setting **/
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+/** first **/
+#first {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** logoBtn **/
+#first .logoBtn {
+    position: absolute;
+
+    left: 0;
+    width: 220px;
+    height: 380px;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#first .logoBtn ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+
+#first .logoBtn ul a {
+    position: relative;
+
+    left: -300px;
+    width: 200px;
+    height: 60px;
+
+    opacity: 0.6;
+    transition-property: left;
+    transition-duration: 1s;
+}
+
+#first .logoBtn ul a:nth-child(1) {
+    height: 120px;
+}
+
+#first .logoBtn ul a li {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+/** fiA **/
+#first .container .fiA {
+    background: var(--aCol02);
+    position: absolute;
+
+    top: 100px;
+    right: 100px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+/** fi Box **/
+#first .container .fiBox {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    bottom: 0;
+    width: 100%;
+
+    transition-property: top;
+    transition-duration: 1s;
+}
+
+#first .container .fiBox.fiSub {
+    position: fixed;
+
+    top: -52px;
+    left: 0;
+    width: 100%;
+}
+
+@media all and (min-width: 768px) and (max-width: 999px) {
+    #first .container .fiBox.fiSub {
+        top: -82px;
+    }
+}
+@media all and (min-width: 320px) and (max-width: 767px) {
+    #first .container .fiBox.fiSub {
+        display: none;
+    }
+}
+
+#first .container .fiBox.fiSub.fiClick {
+    top: 0px;
+}
+
+#first .container .fiBox .fiLogo {
+    position: relative;
+
+    width: 300px;
+    height: 100px;
+}
+
+#first .container .fiBox.fiSub .fiLogo {
+    height: 0;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+#first .container .fiBox .fiLogo .path {
+    background: url(/Blue/Photo/reonaLogo--01.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.4;
+}
+
+#first .container .fiBox .fiList {
+    font-family: 'Indie Flower', cursive;
+    position: relative;
+
+    width: 100%;
+}
+
+#first .container .fiBox.fiSub .fiList ul {
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgb(165, 147, 141, 0.3);
+    box-sizing: border-box;
+    padding: 10px 0px;
+}
+
+#first .container .fiBox .fiList ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#first .container .fiBox .fiList ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 30px;
+
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    color: #a5938d;
+    opacity: 0.6;
+}
+
+#first .container .fiBox .fiBtn {
+    backdrop-filter: blur(10px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 0px;
+
+    font-size: 24px;
+    color: rgb(165, 147, 141, 0.3);;
+
+    border-color: rgb(165, 147, 141, 0.3);;
+    border-radius: 0px 0px 10px 10px;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#first .container .fiBox.fiSub .fiBtn {
+    height: 30px;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/** second **/
+#second,
+#third {
+    background: var(--aCol01A);
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
