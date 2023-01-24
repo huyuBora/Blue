@@ -1,100 +1,161 @@
-function blueEvent(){
-    let MainCover = document.getElementById("main").querySelector(".cover");
-    window.addEventListener("scroll", ()=>{
-        /** main cover pageY 140 -> opacity 06 -> 09 **/
-        if(window.pageYOffset >= 140){
-            MainCover.style.opacity = 0.9;
-        }else{
-            MainCover.style.opacity = 0.6;
+function BlurEvent(){
+    let fiGnb = document.getElementById("first").querySelector(".fiGnb");
+    /** window load event **/
+    window.addEventListener("load", function(){
+        /** fiGnb **/
+        if(window.innerWidth >= 1024){
+            fiGnb.classList.add("pull");
+        }else if(window.innerWidth < 1024){
+            fiGnb.classList.add("small");
         }
     });
+    /** window resize event **/
+    let setTimer = null;
+    window.addEventListener("resize", function(){
+        clearTimeout(setTimer);
+        let fiGnbPull = fiGnb.classList.contains("pull");
+        let fiGnbSmall = fiGnb.classList.contains("small");
+        setTimer = setTimeout(() => {
+            /** fiGnb **/
+            if(window.innerWidth >= 1024){
+                if(!fiGnbPull){
+                    fiGnb.classList.add("pull");
+                    fiGnb.classList.remove("small");
+                }
+            }else if(window.innerWidth < 1024){
+                if(!fiGnbSmall){
+                    fiGnb.classList.remove("pull");
+                    fiGnb.classList.add("small");
 
-    let fiLogoBtnA = document.getElementById("first").querySelectorAll(".logoBtn > ul > a");
-    let logoBtn = document.getElementById("first").querySelector(".logoBtn");
-    for(let i = 0; i < fiLogoBtnA.length; i++){
-        window.addEventListener("load", ()=>{
+                    fiGnb.classList.remove("kip");
+                    fiGnb.classList.remove("fib");
+                    console.log("ss");
+                }
+            }/** fiGnb **/
+            /****/
+        }, 500);
+    });
+    let mainCover = document.getElementById("main").querySelector(".cover");
+    /** window scroll event **/
+    window.addEventListener("scroll", function(){
+        /** main cover **/
+        if(window.pageYOffset > 140){
+            mainCover.style.opacity = 0.9;
+        }else{
+            mainCover.style.opacity = 0.6;
+        }
+    });/** window scroll event end **/
+    /** fi BtnLogo event */
+    let fiBtnLogo = document.getElementById("first").querySelector(".fiBtnLogo");
+    let fiBtnLogoBundle = document.getElementById("first").querySelectorAll(".fiBtnLogo > ul > a");
+    for (let i = 0; i < fiBtnLogoBundle.length; i++) {
+        window.addEventListener("load", function(){
+            /** fi BtnLogo **/
+            if(window.innerWidth >= 768){
+                setTimeout(() => {
+                    fiBtnLogo.style.opacity = 1;
+                    fiBtnLogo.style.visibility = "visible";
+                }, 1800);
+            }else{
+                setTimeout(() => {
+                    fiBtnLogo.style.opacity = 0;
+                    fiBtnLogo.style.visibility = "hidden";
+                }, 1800);
+            }
+            /** fi BtnLogoBundle **/
             if(window.innerWidth >= 1024){
                 setTimeout(() => {
-                    fiLogoBtnA[i].style.left = "5px";
+                    fiBtnLogoBundle[i].style.left = "5px";
                 }, i * 300);
-            }else if(window.innerWidth < 1024 && window.innerWidth >= 768){
+            }else if(window.innerWidth >= 768 && window.innerWidth < 1024){
                 setTimeout(() => {
-                    fiLogoBtnA[i].style.left = "-160px";
+                    fiBtnLogoBundle[i].style.left = "-150px";
                 }, i * 300);
             }else{
-                fiLogoBtnA[i].style.left = "-300px";
-                logoBtn.style.opacity = 0;
-                logoBtn.style.visibility = "hidden";
+                setTimeout(() => {
+                    fiBtnLogoBundle[i].style.left = "-300px";
+                }, i * 300);
             }
-        });/** window load **/
-
-        let timeSet = null;
-        window.addEventListener("resize", ()=>{
-            clearTimeout(timeSet);
-            timeSet = setTimeout(() => {
-                /** fiLogoBtnA 1024 ~ **/
+        });/** fi window load **/
+        let timer = null;
+        window.addEventListener("resize", function(){
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                /** fi BtnLogo **/
+                if(window.innerWidth >= 768){
+                    setTimeout(() => {
+                        fiBtnLogo.style.opacity = 1;
+                        fiBtnLogo.style.visibility = "visible";
+                    }, 300);
+                }else{
+                    setTimeout(() => {
+                        fiBtnLogo.style.opacity = 0;
+                        fiBtnLogo.style.visibility = "hidden";
+                    }, 1800);
+                }
+                /** fi BtnLogoBundle **/
                 if(window.innerWidth >= 1024){
                     setTimeout(() => {
-                        fiLogoBtnA[i].style.left = "5px";
+                        fiBtnLogoBundle[i].style.left = "5px";
                     }, i * 300);
-                }else if(window.innerWidth < 1024 && window.innerWidth >= 768){
+                }else if(window.innerWidth >= 768 && window.innerWidth < 1024){
                     setTimeout(() => {
-                        fiLogoBtnA[i].style.left = "-160px";
+                        fiBtnLogoBundle[i].style.left = "-150px";
                     }, i * 300);
                 }else{
-                    fiLogoBtnA[i].style.left = "-300px";
+                    setTimeout(() => {
+                        fiBtnLogoBundle[i].style.left = "-300px";
+                    }, i * 300);
                 }
-                /** logoBtn **/
-                if(window.innerWidth >= 768){
-                    logoBtn.style.opacity = 1;
-                    logoBtn.style.visibility = "visible";
-                }else{
-                    logoBtn.style.opacity = 0;
-                    logoBtn.style.visibility = "hidden";
-                }
-            }, 1000);
-        });/** window resize **/
-
-        fiLogoBtnA[i].addEventListener("mouseover", ()=>{
-            if(window.innerWidth >= 1024){
-                fiLogoBtnA[i].style.left = "20px";
-            }else if(window.innerWidth < 1024 && window.innerWidth >= 768){
-                fiLogoBtnA[i].style.left = "0px";
+            }, 500);
+        });/** fi window resize **/
+        fiBtnLogoBundle[i].addEventListener("mouseover", function(){
+            if(window.innerWidth >= 768){
+                fiBtnLogoBundle[i].style.opacity = "1";
             }
-        });
-        fiLogoBtnA[i].addEventListener("mouseout", ()=>{
+            /****/
             if(window.innerWidth >= 1024){
-                fiLogoBtnA[i].style.left = "5px";
-            }else if(window.innerWidth < 1024 && window.innerWidth >= 768){
-                fiLogoBtnA[i].style.left = "-160px";
+                fiBtnLogoBundle[i].style.left = "20px";
+            }else if(window.innerWidth >= 768 && window.innerWidth < 1024){
+                fiBtnLogoBundle[i].style.left = "0px";
             }
-        });
-    }/** fiLogoBtn for end **/
-
+        });/** fi window mouseover **/
+        fiBtnLogoBundle[i].addEventListener("mouseout", function(){
+            if(window.innerWidth >= 768){
+                fiBtnLogoBundle[i].style.opacity = "0.6";
+            }
+            /****/
+            if(window.innerWidth >= 1024){
+                fiBtnLogoBundle[i].style.left = "5px";
+            }else if(window.innerWidth >= 768 && window.innerWidth < 1024){
+                fiBtnLogoBundle[i].style.left = "-150px";
+            }
+        });/** fi window mouseout **/
+    }/** fi BtnLogoBundle for **/
+    /** fiGnb **/
     let first = document.getElementById("first");
-    let fiBox = document.getElementById("first").querySelector(".fiBox");
-    let fiBtn =document.getElementById("first").querySelector(".fiBtn");
-
-    let firstView = new IntersectionObserver((fiView)=>{
-        fiView.forEach((fiV)=>{
-            if(!fiV.isIntersecting){
-                console.log("true 01");
-                fiBox.classList.add("fiSub");
-            }else{
-                console.log("false 01");
-                fiBox.classList.remove("fiSub");
-                fiBox.classList.remove("fiClick");
+    let fiBtn = document.getElementById("first").querySelector(".fiBtn");
+    let firstOB = new IntersectionObserver((firstView)=>{
+        firstView.forEach((fiBox)=>{
+            if(window.innerWidth >= 1024){
+                if(!fiBox.isIntersecting){
+                    fiGnb.classList.add("kip");
+                }else if(fiBox.isIntersecting){
+                    fiGnb.classList.remove("kip");
+                    fiGnb.classList.remove("fib");
+                }
             }
         });
     });
-    firstView.observe(first);
-    fiBtn.addEventListener("click", ()=>{
-        let fiClick = fiBox.classList.contains("fiClick");
-        if(!fiClick){
-            fiBox.classList.add("fiClick");
-        }else if(fiClick){
-            fiBox.classList.remove("fiClick");
+    firstOB.observe(first);
+    fiBtn.addEventListener("click", function(){
+        let fib = fiGnb.classList.contains("fib");
+        if(!fib){
+            fiGnb.classList.add("fib");
+        }else if(fib){
+            fiGnb.classList.remove("fib");
         }
     });
 }
-blueEvent();
+BlurEvent();
+console.log(first);
