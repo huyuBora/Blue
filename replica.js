@@ -29,7 +29,6 @@ function BlurEvent(){
 
                     fiGnb.classList.remove("kip");
                     fiGnb.classList.remove("fib");
-                    console.log("ss");
                 }
             }/** fiGnb **/
             /****/
@@ -45,6 +44,20 @@ function BlurEvent(){
             mainCover.style.opacity = 0.6;
         }
     });/** window scroll event end **/
+    /** section **/
+    let section = document.querySelectorAll(".section");
+    let sectionBox = new IntersectionObserver((Box)=>{
+        Box.forEach((Mor)=>{
+            if(Mor.isIntersecting){
+                Mor.target.classList.add("look");
+            }else if(!Mor.isIntersecting){
+                Mor.target.classList.remove("look");
+            }
+        });
+    });
+    sectionBox.observe(section[0]);/** first **/
+    sectionBox.observe(section[1]);/** second **/
+    sectionBox.observe(section[2]);/** third **/
     /** fi BtnLogo event */
     let fiBtnLogo = document.getElementById("first").querySelector(".fiBtnLogo");
     let fiBtnLogoBundle = document.getElementById("first").querySelectorAll(".fiBtnLogo > ul > a");
@@ -135,6 +148,7 @@ function BlurEvent(){
     /** fiGnb **/
     let first = document.getElementById("first");
     let fiBtn = document.getElementById("first").querySelector(".fiBtn");
+    let fiLogo = document.getElementById("first").querySelector(".fiLogo");
     let firstOB = new IntersectionObserver((firstView)=>{
         firstView.forEach((fiBox)=>{
             if(window.innerWidth >= 1024){
@@ -145,6 +159,15 @@ function BlurEvent(){
                     fiGnb.classList.remove("fib");
                 }
             }
+            if(!fiBox.isIntersecting){
+                fiLogo.style.top = "10px";
+                fiLogo.style.opacity = 0.4;
+                fiLogo.style.visibility = "visible";
+            }else if(fiBox.isIntersecting){
+                fiLogo.style.top = "10px";
+                fiLogo.style.opacity = 0;
+                fiLogo.style.visibility = "hidden";
+            }
         });
     });
     firstOB.observe(first);
@@ -152,10 +175,12 @@ function BlurEvent(){
         let fib = fiGnb.classList.contains("fib");
         if(!fib){
             fiGnb.classList.add("fib");
+            fiLogo.style.top = "40px";
         }else if(fib){
             fiGnb.classList.remove("fib");
+            fiLogo.style.top = "10px";
         }
     });
 }
 BlurEvent();
-console.log(first);
+console.log();

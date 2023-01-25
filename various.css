@@ -47,6 +47,34 @@
     width: 100%;
 }
 
+/** fiGnb pull fiLogo **/
+#first .fiGnb.pull .fiGnbLogo {
+    position: relative;
+    
+    width: 300px;
+    height: 100px;
+
+    opacity: 0.3;
+    visibility: visible;
+}
+
+#first .fiGnb.pull.kip .fiGnbLogo {
+    height: 0px;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+#first .fiGnb.pull .fiGnbLogo .path {
+    background: url(/Blue/Photo/reonaLogo--01.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
 /** fiGnb pull fimenu **/
 #first .fiGnb.pull .fiGnbGroup .fimenu {
     position: relative;
@@ -55,6 +83,7 @@
 }
 
 #first .fiGnb.pull.kip .fiGnbGroup .fimenu {
+    backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--aCol01B);
 }
 
@@ -94,6 +123,7 @@
 
 /** fiGnb pull fiBtn **/
 #first .fiGnb.pull .fiGnbGroup .fiBtn {
+    backdrop-filter: blur(10px);
     position: relative;
     display: flex;
     justify-content: center;

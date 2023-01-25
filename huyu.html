@@ -17,8 +17,13 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- font-family: 'Indie Flower', cursive; -->
+    <!-- font-family: 'Indie Flower', cursive; --><!-- En -->
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- font-family: 'Lato', sans-serif; --><!-- En -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+
+    <!-- font-family: 'Zen Maru Gothic', sans-serif; --><!-- Je -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
 
     <!-- i con -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -31,6 +36,10 @@
             text-decoration: none;
         }
 
+        html {
+            font-size: 16px;
+        }
+
         :root {
             --aCol01 : #F8F8FF;
             --aCol01A : rgb(248, 248, 255, 0.1);
@@ -40,14 +49,46 @@
             --aCol02 : #a5938d;
         }
         
+        /** container **/
         .container {
             position: relative;
 
-            width: 1024px;
+            width: 100%;
             height: 100%;
         }
 
-        #second,
+        .section .title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 50px;
+        }
+
+        .section .title h1 {
+            position: relative;
+
+            left: -30px;
+
+            font-family: 'Lato', sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--aCol01);
+
+            opacity: 0;
+            visibility: hidden;
+            transition-property: left, opacity, visibility;
+            transition-duration: 1s;
+        }
+        .section.look .title h1 {
+            left: 0px;
+
+            opacity: 0.6;
+            visibility: visible;
+        }
+
         #third {
             background: var(--aCol01C);
             position: relative;
@@ -64,7 +105,11 @@
             <div class="cover"></div>
         </div>
         <!-- first -->
-        <div id="first">
+        <div id="first" class="section">
+            <!-- fiLogo -->
+            <div class="fiLogo">
+                <div class="path"></div>
+            </div>
             <!-- fi BtnLogo -->
             <div class="fiBtnLogo">
                 <ul>
@@ -79,11 +124,14 @@
             <div class="container">
                 <div class="fiGnb">
                     <div class="fiGnbGroup">
+                        <div class="fiGnbLogo">
+                            <div class="path"></div>
+                        </div>
                         <!---->
                         <div class="fimenu">
                             <ul>
-                                <a href="#none"><li>Information</li></a>
                                 <a href="#none"><li>Profile</li></a>
+                                <a href="#none"><li>Information</li></a>
                                 <a href="#none"><li>Discography</li></a>
                                 <a href="#none"><li>Live</li></a>
                                 <a href="#none"><li>Media</li></a>
@@ -103,15 +151,27 @@
             </div>
         </div>
         <!-- second -->
-        <div id="second"></div>
+        <div id="second" class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- title -->
+                <div class="title">
+                    <h1>Profile</h1>
+                </div>
+                <!-- seInt -->
+                <div class="seInt">
+                    
+                </div>
+            </div>
+        </div>
         <!-- third -->
-        <div id="third"></div>
+        <div id="third" class="section"></div>
         <!-- fourth -->
-        <div id="fourth"></div>
+        <div id="fourth" class="section"></div>
         <!-- fifth -->
-        <div id="fifth"></div>
+        <div id="fifth" class="section"></div>
         <!-- sixth -->
-        <div id="sixth"></div>
+        <div id="sixth" class="section"></div>
     </div>
 </body>
 </html>
