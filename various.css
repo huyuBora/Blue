@@ -1,227 +1,36 @@
-/**
-<li>Information</li>
-<li>Profile</li>
-<li>Discography</li>
-<li>Live</li>
-<li>Media</li>
-<li>Fan Club</li>
-<li>Goods</li>
-<li>Mail Magazine</li>
-<li>Twitter</li>
-<li>YouTube</li>
-**/
+/** section **/
 
-/** fiGnb pull **/
-#first .fiGnb.pull {
-    z-index: 10;
-    position: absolute;
+/** first **/
+#first {
+    position: relative;
 
-    bottom: 0;
-    left: 0;
     width: 100%;
+    height: 100vh;
+}
+/** second **/
+#second {
+    background: var(--aCol01A);
+    position: relative;
 
-    opacity: 1;
-    visibility: visible;
+    width: 100%;
+    height: 100vh;
+}
+/** third **/
+#third {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+/** fourth **/
+#fourth {
     
-    transition-property: top, opacity, visibility;
-    transition-duration: 1s, 2s, 2s;
 }
-
-#first .fiGnb.pull.kip {
-    position: fixed;
-
-    top: -36px;
-    bottom: initial;
-}
-
-#first .fiGnb.pull.kip.fib {
-    top: 0px;
-}
-
-#first .fiGnb.pull .fiGnbGroup {
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-/** fiGnb pull fiLogo **/
-#first .fiGnb.pull .fiGnbLogo {
-    position: relative;
+/** fifth **/
+#fifth {
     
-    width: 300px;
-    height: 100px;
-
-    opacity: 0.3;
-    visibility: visible;
 }
-
-#first .fiGnb.pull.kip .fiGnbLogo {
-    height: 0px;
-
-    opacity: 0;
-    visibility: hidden;
-}
-
-#first .fiGnb.pull .fiGnbLogo .path {
-    background: url(/Blue/Photo/reonaLogo--01.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-}
-
-/** fiGnb pull fimenu **/
-#first .fiGnb.pull .fiGnbGroup .fimenu {
-    position: relative;
+/** sixth **/
+#sixth {
     
-    width: 100%;
-}
-
-#first .fiGnb.pull.kip .fiGnbGroup .fimenu {
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--aCol01B);
-}
-
-#first .fiGnb.pull .fiGnbGroup .fimenu ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px 0px;
-}
-
-#first .fiGnb.pull .fiGnbGroup .fimenu ul a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    bottom: 0;
-    width: 100px;
-    font-size: 16px;
-    font-family: 'Indie Flower', cursive;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--aCol01);
-
-    opacity: 0.4;
-
-    transition-property: bottom, opacity;
-    transition-duration: 1s;
-}
-#first .fiGnb.pull .fimenu ul a:hover {
-    bottom: 10px;
-
-    opacity: 0.8;
-}
-#first .fiGnb.pull.kip.fib .fimenu ul a:hover {
-    bottom: 0;
-}
-
-/** fiGnb pull fiBtn **/
-#first .fiGnb.pull .fiGnbGroup .fiBtn {
-    backdrop-filter: blur(10px);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 80px;
-    height: 0px;
-
-    border-width: 0px 2px 2px 2px;
-    border-color: var(--aCol01B);
-    border-style: solid;
-    border-radius: 0px 0px 10px 10px;
-
-    font-size: 21px;
-    color: var(--aCol01B);
-
-    opacity: 0;
-    visibility: hidden;
-}
-
-#first .fiGnb.pull.kip .fiGnbGroup .fiBtn {
-    height: 30px;
-
-    opacity: 1;
-    visibility: visible;
-}
-
-/** fiGnb small **/
-#first .fiGnb.small {
-    position: absolute;
-
-    top: 0;
-    right: 0;
-    height: 100%;
-
-    opacity: 1;
-    visibility: visible;
-
-    transition-property: opacity, visibility;
-    transition-duration: 2s;
-}
-
-#first .fiGnb.small .fiGnbGroup {
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-}
-
-/** fiGnb small fimenu **/
-#first .fiGnb.small .fiGnbGroup .fimenu {
-    position: relative;
-    
-    height: 100%;
-
-    writing-mode: vertical-lr;
-}
-#first .fiGnb.small .fimenu ul {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-
-    height: 100%;
-    padding: 0px 5px;
-}
-
-#first .fiGnb.small .fimenu ul a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    right: 0;
-    width: 30px;
-    height: 100px;
-    transform: rotate(180deg);
-
-    font-size: 16px;
-    font-family: 'Indie Flower', cursive;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--aCol01);
-
-    opacity: 0.4;
-    transition-property: right, opacity;
-    transition-duration: 1s;
-}
-#first .fiGnb.small .fimenu ul a:hover {
-    right: 10px;
-    opacity: 0.8;
-}
-#first .fiGnb.small .fimenu ul a:nth-child(n+8) {
-    display: none;
-}
-
-/** fiGnb small fiBtn **/
-#first .fiGnb.small .fiBtn {
-    display: none;
 }
