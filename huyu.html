@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="unknownn.css">
+    <link rel="stylesheet" href="various.css">
+    <link rel="stylesheet" href="media.css">
+
+    <!-- Js -->
+    <script defer src="replica.js"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- font-family: 'Roboto', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <!-- font-family: 'Indie Flower', cursive; -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <!-- i con -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        :root {
+            --aCol01 : #F8F8FF;
+            --aCol01A : rgb(248, 248, 255, 0.1);
+            --aCol01B : rgb(248, 248, 255, 0.2);
+            --aCol01C : rgb(248, 248, 255, 0.3);
+
+            --aCol02 : #a5938d;
+        }
+
+        .section.view {
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div id="under">
+        <!-- click event -->
+        <div id="upClick">
+            <i class='bx bx-chevron-up' ></i>
+        </div>
+        <div id="downClick">
+            <i class='bx bx-chevron-down'></i>
+        </div>
+        <!-- display -->
+        <div id="display">
+            <ul>
+                <li>first</li>
+                <li>second</li>
+                <li>third</li>
+                <li>fourth</li>
+                <li>fifth</li>
+            </ul>
+        </div>
+        <!-- container -->
+        <div id="container"><!-- 전체 틀 (?) -->
+            <!-- first -->
+            <div id="first" class="section view">
+                <!-- logoBtn -->
+                <div class="btnLogo">
+                    <ul>
+                        <a href="#none"><li><img src="/Blue/Image/レオナ/btn Logo/btn Logo (0).jpg" alt=""></li></a>
+                        <a href="#none"><li><img src="/Blue/Image/レオナ/btn Logo/btn Logo (1).jpg" alt=""></li></a>
+                        <a href="#none"><li><img src="/Blue/Image/レオナ/btn Logo/btn Logo (2).jpg" alt=""></li></a>
+                        <a href="#none"><li><img src="/Blue/Image/レオナ/btn Logo/btn Logo (3).jpg" alt=""></li></a>
+                        <a href="#none"><li><img src="/Blue/Image/レオナ/btn Logo/btn Logo (4).jpg" alt=""></li></a>
+                        <a href="#none"><li><img src="/Blue/Image/レオナ/btn Logo/btn Logo (5).png" alt=""></li></a>
+                    </ul>
+                </div>
+                <!-- mouse scroll -->
+                <div id="mouseScroll">
+                    <ul>
+                        <li>scroll</li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- second -->
+            <div id="second" class="section"></div>
+            <!-- third -->
+            <div id="third" class="section"></div>
+            <!-- fourth -->
+            <div id="fourth" class="section"></div>
+            <!-- fifth -->
+            <div id="fifth" class="section"></div>
+        </div>
+    </div>
+</body>
+</html>
