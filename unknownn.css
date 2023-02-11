@@ -16,7 +16,7 @@
 /** upClick // downClick **/
 #upClick,
 #downClick {
-    z-index: 10;
+    z-index: 1;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@
 
 /** display **/
 #display {
-    z-index: 10;
+    z-index: 1;
     position: fixed;
 
     left: 5px;
@@ -67,7 +67,7 @@
 
     padding: 10px;
 
-    transition-property: opacity, visibility;
+    transition-property: left, opacity, visibility;
     transition-duration: 1s;
 
     font-size: 1em;
@@ -102,7 +102,7 @@
 
     color: var(--aCol01);
 
-    transition-property: opacity, left, color;
+    transition-property: opacity, left, color, text-shadow;
     transition-duration: 1s;
 }
 #display ul li:nth-child(1) {
@@ -111,6 +111,7 @@
 
 #display ul li.displaySub {
     left: 10px;
+    text-shadow: 1px 1px 1px #555;
 
     opacity: 1;
 
@@ -188,7 +189,6 @@
 
 /** mouseScroll **/
 #mouseScroll {
-    z-index: 10;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -265,3 +265,133 @@
     transform: rotate(45deg);
 }
 
+/** first logo **/
+#first .firstLogo {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    width: 300px;
+    height: 100px;
+
+    opacity: 0.8;
+}
+
+#first .firstLogo .path {
+    background: url(/Blue/Image/レオナ/Logo/reona\ logo\ \(0\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+/** first menu **/
+#first .firstMenu {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+    transition-property: width, height;
+    transition-duration: 1s;
+}
+
+#first .firstMenu.expans {
+    width: 300px;
+    height: 300px;
+}
+
+/****/
+#first .firstMenu .firstMenuBtn {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#first .firstMenu .firstMenuBtn i {
+    position: relative;
+
+    color: var(--aCol01);
+
+    font-size: 1.5em;
+
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#first .firstMenu .firstMenuBtn.openFiMenu i {
+    color: #FFA07A;
+}
+
+/** first menu box **/
+#first .firstMenu .firstMenuBox {
+    background: var(--aCol01);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 0%;
+    height: 0%;
+    border-radius: 15px;
+    transition-property: top, right, width, height, box-shadow;
+    transition-duration: 1s;
+}
+
+#first .firstMenu.expans .firstMenuBox {
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 1px 1px 10px 0px #333;
+}
+
+/** second **/
+#second {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#second .box {
+    background: var(--aCol01B);
+    position: relative;
+
+    width: calc(100% - 100px);
+    height: 100%;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+/** profile **/
+#second .box .profile {
+    background: seashell;
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    width: 320px;
+    height: 400px;
+}

@@ -45,10 +45,19 @@
             --aCol02 : #a5938d;
         }
 
+        .section {
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
         .section.view {
-            z-index: 5;
+            opacity: 1;
         }
     </style>
+
+    <!--
+        container z-index = 1000
+    -->
 </head>
 <body>
     <div id="under">
@@ -94,9 +103,27 @@
                         <li></li>
                     </ul>
                 </div>
+                <!-- first logo -->
+                <div class="firstLogo">
+                    <div class="path"></div>
+                </div>
+                <!-- first Menu -->
+                <div class="firstMenu">
+                    <!---->
+                    <div class="firstMenuBtn"><i class='bx bxs-heart'></i></div>
+                    <!---->
+                    <div class="firstMenuBox"></div>
+                </div>
             </div>
             <!-- second -->
-            <div id="second" class="section"></div>
+            <div id="second" class="section">
+                <div class="box">
+                    <!-- profile -->
+                    <div class="profile">
+                        <div class="photo"></div>
+                    </div>
+                </div>
+            </div>
             <!-- third -->
             <div id="third" class="section"></div>
             <!-- fourth -->
@@ -107,3 +134,5 @@
     </div>
 </body>
 </html>
+
+<!-- expans -->
