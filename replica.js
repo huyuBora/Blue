@@ -1,3 +1,5 @@
+history.scrollRestoration = "auto";
+
 function BlueEvent(){
     let pageNumber = 1; // 보고있는 페이지 인덱스 번호
     let position = 0; // 현제 위치 값
@@ -9,7 +11,7 @@ function BlueEvent(){
     let section = document.querySelectorAll(".section");
     let sectionIndex = section.length;
 
-    let box = document.querySelectorAll(".box");
+    let location = document.querySelectorAll(".location");
 
     let first = document.getElementById("first");
 
@@ -30,11 +32,11 @@ function BlueEvent(){
             }
 
             /** box evnet **/
-            for(let i = 0; i < box.length; i++){
+            for(let i = 0; i < location.length; i++){
                 if(window.innerWidth < 768){
-                    box[i].style.width = "100%";
+                    location[i].style.width = "100%";
                 }else{
-                    box[i].style.width = "calc(100% - 100px)";
+                    location[i].style.width = "calc(100% - 100px)";
                 }
             }
         }, 300);

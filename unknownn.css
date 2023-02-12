@@ -374,24 +374,51 @@
     height: 100vh;
 }
 
-#second .box {
-    background: var(--aCol01B);
+#second .location {
     position: relative;
 
     width: calc(100% - 100px);
     height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 
     transition-property: width;
     transition-duration: 1s;
 }
 
-/** profile **/
-#second .box .profile {
-    background: seashell;
-    position: absolute;
+#second .location .box {
+    position: relative;
 
-    top: 0px;
-    left: 0px;
-    width: 320px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
 }
+
+#second .location .box .int {
+    background: saddlebrown;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 20vh;
+}
+
+#second .location .box .int ul {
+    background: darkblue;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+#second .location .box .int ul li:nth-child(1) {
+    background: sandybrown;
+    
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 5em;
+}
+
+#second .location .box .int ul li:nth-child(n+2) {
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.8em;
+    }
