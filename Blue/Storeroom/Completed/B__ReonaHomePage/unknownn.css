@@ -1,0 +1,840 @@
+/** under **/
+#under {
+    background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/** upClick // downClick **/
+#upClick,
+#downClick {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    width: 80px;
+    height: 30px;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#upClick {
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#downClick {
+    bottom: 0;
+}
+
+#upClick i,
+#downClick i {
+    position: relative;
+    font-size: 2em;
+    color: var(--aCol01);
+
+    animation-name: moveClick;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+/** display **/
+#display {
+    z-index: 1;
+    position: fixed;
+
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0;
+    visibility: hidden;
+
+    padding: 10px;
+
+    transition-property: left, opacity, visibility;
+    transition-duration: 1s;
+
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Indie Flower', cursive;
+}
+
+#display.app {
+    opacity: 1;
+    visibility: visible;
+}
+
+#display ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+#display ul li {
+    position: relative;
+
+    left: 0;
+
+    margin-bottom: 3px;
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+
+    color: var(--aCol01);
+
+    transition-property: opacity, left, color, text-shadow;
+    transition-duration: 1s;
+}
+#display ul li:nth-child(1) {
+    margin-top: 3px;
+}
+
+#display ul li.displaySub {
+    left: 10px;
+    text-shadow: 1px 1px 1px #555;
+
+    opacity: 1;
+
+    color: #000;
+}
+
+/** container **/
+#container {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+/** first **/
+#first {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/** first btnLogo **/
+#first .btnLogo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 210px;
+    transition-property: left;
+    transition-duration: 1s;
+}
+
+#first .btnLogo ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+}
+
+#first .btnLogo ul a {
+    position: relative;
+
+    left: -300px;
+    width: 200px;
+    opacity: 0.7;
+    transition-property: left, opacity;
+    transition-duration: 1s;
+}
+
+#first .btnLogo ul a:nth-child(1) {
+    height: 120px;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+#first .btnLogo ul a:nth-child(n+2) {
+    height: 60px;
+
+    margin-bottom: 3px;
+}
+#first .btnLogo ul a li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#first .btnLogo ul a li img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/** mouseScroll **/
+#mouseScroll {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+    width: 25px;
+    height: 120px;
+
+    animation-name: mouseScrollEvent;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes mouseScrollEvent {
+    0%{
+        transform: translateY(0px);
+    }50%{
+        transform: translateY(10px);
+    }100%{
+        transform: translateY(0px);
+    }
+}
+
+#mouseScroll ul:nth-child(1) {
+    position: absolute;
+
+    top: 0;
+    writing-mode: vertical-rl;
+
+    opacity: 0.7;
+}
+
+#mouseScroll ul:nth-child(1) li {
+    transform: rotate(180deg);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--aCol01);
+    text-transform: uppercase;
+}
+
+#mouseScroll ul:nth-child(2) {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+}
+
+#mouseScroll ul:nth-child(2) li {
+    background: var(--aCol01);
+    position: absolute;
+    right: 0;
+}
+
+#mouseScroll ul:nth-child(2) li:nth-child(1) {
+    top: 0;
+    width: 2px;
+    height: 100%;
+}
+
+#mouseScroll ul:nth-child(2) li:nth-child(2) {
+    bottom: 2px;
+    width: 50%;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+/** first logo **/
+#first .firstLogo {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    width: 300px;
+    height: 100px;
+
+    opacity: 0.8;
+}
+
+#first .firstLogo .path {
+    background: url(/Blue/Image/レオナ/Logo/reona\ logo\ \(0\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+/** first menu **/
+#first .firstMenu {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+    transition-property: width, height;
+    transition-duration: 1s;
+}
+
+#first .firstMenu.expans {
+    width: 300px;
+    height: 300px;
+}
+
+/****/
+#first .firstMenu .firstMenuBtn {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#first .firstMenu .firstMenuBtn i {
+    position: relative;
+
+    color: var(--aCol01);
+
+    font-size: 1.5em;
+
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#first .firstMenu .firstMenuBtn.openFiMenu i {
+    color: #FFA07A;
+}
+
+/** first menu box **/
+#first .firstMenu .firstMenuBox {
+    background: var(--aCol01);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 0%;
+    height: 0%;
+    border-radius: 15px;
+    transition-property: top, right, width, height, box-shadow;
+    transition-duration: 1s;
+}
+
+#first .firstMenu.expans .firstMenuBox {
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 1px 1px 10px 0px #333;
+}
+
+/** second **/
+#second {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#second .location {
+    position: relative;
+
+    width: calc(100% - 100px);
+    height: 100%;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+#second .location .box {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+#second .location .box .int {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 20vh;
+}
+
+#second .location .box .int ul:nth-child(1) {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 5em;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+#second.view .location .box .int ul:nth-child(1) {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+#second .location .box .int ul:nth-child(2) {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 10px;
+
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 0.8em;
+    font-weight: 600;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+#second.view .location .box .int ul:nth-child(2) {
+    opacity: 1;
+    transition-delay: 2s;
+}
+
+/****/
+#second .location .box .intSub {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+#second .location .box .intSub ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#second .location .box .intSub ul li {
+    position: relative;
+
+    margin-bottom: 10px;
+
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+#second.view .location .box .intSub ul li:nth-child(1) {
+    opacity: 1;
+    transition-delay: 3s;
+}
+#second.view .location .box .intSub ul li:nth-child(2) {
+    opacity: 1;
+    transition-delay: 3.5s;
+}
+#second.view .location .box .intSub ul li:nth-child(3) {
+    opacity: 1;
+    transition-delay: 4s;
+}
+#second.view .location .box .intSub ul li:nth-child(4) {
+    opacity: 1;
+    transition-delay: 4.5s;
+}
+#second.view .location .box .intSub ul li:nth-child(5) {
+    opacity: 1;
+    transition-delay: 5s;
+}
+#second.view .location .box .intSub ul li:nth-child(6) {
+    opacity: 1;
+    transition-delay: 5.5s;
+}
+#second.view .location .box .intSub ul li:nth-child(7) {
+    opacity: 1;
+    transition-delay: 6s;
+}
+#second.view .location .box .intSub ul li:nth-child(8) {
+    opacity: 1;
+    transition-delay: 6s;
+}
+
+/** third **/
+#third {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#third .location {
+    position: relative;
+
+    width: calc(100% - 100px);
+    height: 100%;
+
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+#third .location .box {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#third .location .box .int {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+
+#third .location .box .int .intLeft {
+    position: relative;
+
+    width: 60%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 1px #333;
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    #third .location .box .int .intLeft {
+        position: relative;
+    
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#third .location .box .int .intLeft .path {
+    background: url(/Blue/Image/レオナ/Discography/Discography\ \(0\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#third .location .box .int .intLeft .path:hover {
+    transform: scale(1.2);
+}
+
+#third .location .box .int .intLeft .path ul {
+    position: relative;
+    padding: 0px;
+    box-sizing: border-box;
+    opacity: 1;
+}
+#third .location .box .int .intLeft .path:hover ul {
+    opacity: 1;
+}
+
+/****/
+#third .location .box .int .intLeft .path .intTxt {
+    background: var(--aCol03);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#third .location .box .int .intLeft .path:hover .intTxt {
+    opacity: 1;
+    visibility: visible;
+}
+
+#third .location .box .int .intLeft .path .intTxt ul {
+    position: relative;
+
+    font-family: var(--E01);
+    color: var(--aCol01);
+}
+#third .location .box .int .intLeft .path .intTxt ul:nth-child(1) li {
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#third .location .box .int .intLeft .path .intTxt ul:nth-child(2) li {
+    margin-left: 5px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+/****/
+#third .location .box .int .intRight {
+    position: relative;
+
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    #third .location .box .int .intRight {
+        position: relative;
+    
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 0%;
+
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#third .location .box .int .intRight .intRightTop {
+    background: sienna;
+    position: relative;
+
+    top: 0;
+    left: 0;
+    width: calc(100% - 5px);
+    height: 100%;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 1px #333;
+}
+
+#third .location .box .int .intRight .intRightTop .path {
+    background: url(/Blue/Image/レオナ/Discography/Discography\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#third .location .box .int .intRight .intRightTop .path:hover {
+    transform: scale(1.1);
+}
+
+#third .location .box .int .intRight .intRightTop .path .intTxt {
+    background: var(--aCol03);
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#third .location .box .int .intRight .intRightTop .path:hover .intTxt {
+    
+    opacity: 1;
+    visibility: visible;
+}
+
+#third .location .box .int .intRight .intRightTop .path .intTxt ul {
+    position: relative;
+    display: flex;
+
+    font-family: var(--E01);
+    font-weight: 600;
+    color: var(--aCol01);
+}
+
+#third .location .box .int .intRight .intRightTop .path .intTxt ul:nth-child(1) {
+    font-size: 1.6em;
+}
+#third .location .box .int .intRight .intRightTop .path .intTxt ul:nth-child(2) {
+    font-size: 1em;
+    margin-top: -10px;
+}
+
+/****/
+#third .location .box .intSub {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 40%;
+}
+
+#third .location .box .intSub .intSub__01,
+#third .location .box .intSub .intSub__02,
+#third .location .box .intSub .intSub__03 {
+    position: relative;
+
+    width: 33%;
+    height: 95%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#third .location .box .intSub .intSub__01 .path,
+#third .location .box .intSub .intSub__02 .path,
+#third .location .box .intSub .intSub__03 .path {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#third .location .box .intSub .intSub__01 .path:hover,
+#third .location .box .intSub .intSub__02 .path:hover,
+#third .location .box .intSub .intSub__03 .path:hover {
+    transform: scale(1.1);
+}
+
+#third .location .box .intSub .intSub__01 .path {
+    background: url(/Blue/Image/レオナ/Discography/Discography\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+#third .location .box .intSub .intSub__02 .path {
+    background: url(/Blue/Image/レオナ/Discography/Discography\ \(3\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+#third .location .box .intSub .intSub__03 .path {
+    background: url(/Blue/Image/レオナ/Discography/Discography\ \(4\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#third .location .box .intSub .intSub__01 .path .intTxt,
+#third .location .box .intSub .intSub__02 .path .intTxt,
+#third .location .box .intSub .intSub__03 .path .intTxt {
+    background: var(--aCol03);
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    
+    color: var(--aCol01);
+    font-family: var(--E01);
+    font-weight: 600;
+
+    font-size: 1em;
+    letter-spacing: 1px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+#third .location .box .intSub .intSub__01 .path:hover .intTxt,
+#third .location .box .intSub .intSub__02 .path:hover .intTxt,
+#third .location .box .intSub .intSub__03 .path:hover .intTxt {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    #third .location .box .intSub .intSub__01 {
+        width: 49%;
+    }
+    #third .location .box .intSub .intSub__02 {
+        width: 49%;
+    }
+    #third .location .box .intSub .intSub__03 {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 0%;
+    }
+}
