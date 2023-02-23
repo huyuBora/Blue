@@ -29,6 +29,11 @@
             text-decoration: none;
         }
 
+        html {
+            transition-property: font-size;
+            transition-duration: 1s;
+        }
+
         :root {
             --aCol01 : #F8F8FF;
             --aCol01A : rgb(248, 248, 255, 0.1);
@@ -41,6 +46,25 @@
 
 </head>
 <body>
-    
+    <!-- under -->
+    <div id="under">
+        <!-- page move btn -->
+        <div id="pageUpBtn" class="pageMoveBtn"><i class='bx bx-chevron-up'></i></div>
+        <div id="pageDownBtn" class="pageMoveBtn"><i class='bx bx-chevron-down'></i></div>
+        <!-- container -->
+        <div id="container">
+            <!-- first -->
+            <div id="first" class="section"></div>
+            <!-- second -->
+            <div id="second" class="section"></div>
+            <!-- third -->
+            <div id="third" class="section"></div>
+        </div>
+    </div>
 </body>
 </html>
+
+<!--
+    <div id="fourth" class="section"></div>
+    <div id="fifth" class="section"></div>
+-->

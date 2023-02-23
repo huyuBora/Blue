@@ -1,0 +1,86 @@
+/** under **/
+#under {
+    background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/** page move btn **/
+#pageUpBtn {
+    top: 5px;
+}
+#pageDownBtn {
+    bottom: 5px;
+}
+
+.pageMoveBtn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 20px;
+
+    font-size: 1.6em;
+    color: var(--aCol01);
+}
+
+/** container **/
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.section {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+.section.Appear {
+    opacity: 1;
+    visibility: visible;
+}
+
+/** first **/
+#first {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** second **/
+#second {
+    background: var(--aCol01B);
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** third **/
+#third {
+    background: var(--aCol01C);
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
