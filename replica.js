@@ -1,88 +1,28 @@
-function BlueEvent(){
-    let section = document.querySelectorAll(".section");
-    let sectionNumber = section.length;
-
-    let container = document.getElementById("container");
-
-    /** PageEvent **/
-    function PageEvent(){
-        let pageNumber = 1;
-        let pagePositin = 0;
-        let pageBoxHeight = window.innerHeight;
-
-        let pageUpBtn = document.getElementById("pageUpBtn");
-        let pageDownBtn = document.getElementById("pageDownBtn");
-
-        let PageUpEvent = function(){
-            if(pageNumber > 1){
-                --pageNumber;
-                pagePositin -= pageBoxHeight;
-                container.style.transform = `translateY(${-pagePositin}px)`;
-                console.log(`${pageNumber}PAGE`);
+console.log("Huyu bora HomePage log");
+var SECTION = document.querySelectorAll('.section');
+var sectionBundle = SECTION.length + 1;
+var CONTAINER = document.getElementById("container");
+function PageEvent() {
+    var PageNumber = 1;
+    var PagePosition = 0;
+    var PageHeight = window.innerHeight;
+    var PageTimer = null;
+    var PageDownEvnet = function () {
+        if (PageNumber === sectionBundle) {
+            throw new Error("PAGE NUMBER MAX");
+        }
+        if (PageNumber > 1) {
+            --PageNumber;
+            PagePosition += PageHeight;
+            CONTAINER.style.transform = "translateY(".concat(-PagePosition, "px)");
+            console.log("".concat(PageNumber, "PAGE"));
+        }
+    };
+    window.addEventListener("mousewheel", function (e) {
+        clearTimeout(PageTimer);
+        PageTimer = setTimeout(function () {
+            if (deltaY == -120) {
             }
-        }
-        let PageDownEvent = function(e){
-            if(pageNumber < sectionNumber){
-                ++pageNumber;
-                pagePositin += pageBoxHeight;
-                container.style.transform = `translateY(${-pagePositin}px)`;
-                console.log(`${pageNumber}PAGE`);
-            }
-        }
-        let pageTimner = null;
-        window.addEventListener("mousewheel", function(e) {
-            clearTimeout(pageTimner);
-            pageTimner = setTimeout(() => {
-                if(e.wheelDelta == 120){
-                    PageUpEvent();
-                    if(pageNumber == 1){
-                        e.preventDefault();
-                    }
-                }
-                if(e.wheelDelta == -120){
-                    PageDownEvent();
-                    if(pageNumber == sectionNumber){
-                        e.preventDefault();
-                    }
-                }
-            }, 300);
-        });
-        pageUpBtn.addEventListener("click", function(e) {
-            clearTimeout(pageTimner);
-            pageTimner = setTimeout(() => {
-                PageUpEvent();
-                if(pageNumber == 1){
-                    e.preventDefault();
-                }
-            }, 300);
-        });
-        pageDownBtn.addEventListener("click", function(e) {
-            clearTimeout(pageTimner);
-            pageTimner = setTimeout(() => {
-                PageDownEvent();
-                if(pageNumber == sectionNumber){
-                    e.preventDefault();
-                }
-            }, 300);
-        });
-    }PageEvent();
-    /** SectionEvent **/
-    function SectionEvent() {
-        let Options = {
-            rootMargin: '-100px'
-        }
-        let sectionObserver = new IntersectionObserver((entries)=>{
-            entries.forEach((entry)=>{
-                if(entry.isIntersecting){
-                    entry.target.classList.add("Appear");
-                }else{
-                    entry.target.classList.remove("Appear");
-                }
-            });
-        }, Options);
-
-        sectionObserver.observe(section[0]);
-        sectionObserver.observe(section[1]);
-        sectionObserver.observe(section[2]);
-    }SectionEvent();
-}BlueEvent();
+        }, 300);
+    });
+}

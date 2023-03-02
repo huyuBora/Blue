@@ -1,0 +1,20 @@
+@media all and (min-width: 0px) and (max-width: 424px){
+    html {
+        font-size: 10px;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    html {
+        font-size: 12px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    html {
+        font-size: 14px;
+    }
+}
+@media all and (min-width: 1024px) and (max-width: 1440px){
+    html {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,37 @@
+/** under **/
+#under {
+    background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/** container **/
+#container {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+/** first **/
+#first {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** second **/
+#second {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}

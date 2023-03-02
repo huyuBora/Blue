@@ -1,0 +1,129 @@
+/** under **/
+#under {
+    background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/** page move btn **/
+#pageUpBtn {
+    top: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+}
+#pageDownBtn {
+    bottom: 5px;
+}
+
+.pageMoveBtn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 20px;
+
+    font-size: 1.6em;
+    color: var(--aCol01);
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+/** container **/
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.section {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+.section.Appear {
+    opacity: 1;
+    visibility: visible;
+}
+
+/** first **/
+#first {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#first .btnLogo {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    left: 0;
+    width: 210px;
+    height: 430px;
+}
+
+#first .btnLogo a {
+    position: relative;
+
+    left: 0px;
+    width: 200px;
+    height: 60px;
+
+    opacity: 0.6;
+
+    transition-property: left, opacity;
+    transition-duration: 1s;
+}
+#first .btnLogo a:nth-child(1) {
+    height: 120px;
+}
+
+#first .btnLogo a img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+/** second **/
+#second {
+    background: var(--aCol01B);
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/** third **/
+#third {
+    background: var(--aCol01C);
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
