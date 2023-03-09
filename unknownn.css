@@ -1,49 +1,81 @@
-/* TEST */
-#TEST {
-    z-index: 10;
-    background: var(--aCol01);
-    position: fixed;
-
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-}
-
-/* under */
 #under {
     background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
     height: 100vh;
+
+    overflow: hidden;
+}
+
+/* btn under */
+#BtnUp {
+    top: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+}
+#BtnDown {
+    bottom: 5px;
+}
+
+.Btn-under {
+    z-index: 10;
+    position: fixed;
+
+    width: 60px;
+    height: 20px;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+.Btn-under i {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--aCol01);
 }
 
 /* container */
 #container {
     position: relative;
-}
 
-/* section */
-.section {
-    position: relative;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    transition-duration: 1s;
 }
 
 /* first */
 #first {
-}
+    position: relative;
 
+    height: 100vh;
+}
 /* second */
 #second {
-}
+    position: relative;
 
+    height: 100vh;
+}
 /* third */
-/* fourth */
-/* fifth */
+#third {
+    position: relative;
+
+    height: 100vh;
+}

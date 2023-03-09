@@ -1,0 +1,81 @@
+/* under */
+#under {
+    background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/* under btn */
+.underBtn {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80px;
+    height: 20px;
+
+    opacity: 1;
+    visibility: visible;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+/* up *//* down */
+#BtnUp {
+    top: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+#BtnDown {
+    bottom: 5px;
+}
+
+.underBtn i {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--aCol01);
+}
+
+/* container */
+#container {
+    position: relative;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+/* section */
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* first */
+#first {
+    position: relative;
+}
+
+/* second */
+#second {
+    background: darkgoldenrod;
+}
+
+/* third */
+#third {
+    background: seagreen;
+}
+/* fourth */
+/* fifth */
