@@ -1,0 +1,201 @@
+#under {
+    background: url(/Blue/Image/レオナ/main\ photo\ \(0\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/* btn under */
+#BtnUp {
+    top: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+}
+#BtnDown {
+    bottom: 5px;
+}
+
+.Btn-under {
+    z-index: 10;
+    position: fixed;
+
+    width: 60px;
+    height: 20px;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+}
+
+.Btn-under i {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--aCol01);
+}
+
+/* mini menu */
+#miniMenu {
+    background: var(--aCol01);
+    z-index: 100;
+    position: fixed;
+
+    top: 5px;
+    right: 5px;
+    width: 300px;
+    height: 300px;
+
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #708090;
+}
+
+#miniMenu .miniMenuBtn {
+    z-index: 101;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#miniMenu .miniMenuBtn i {
+    font-size: 1em;
+    color: #F08080;
+
+    animation: miniMenuBtn 2s infinite alternate linear;
+}
+
+@keyframes miniMenuBtn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+#miniMenu .miniMenuBox {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+}
+
+#miniMenu .miniMenuBox .miniMenuBox--search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+}
+
+#miniMenu .miniMenuBox .miniMenuBox--search input {
+    border: 2px solid #E6E6FA;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#miniMenu .miniMenuBox .miniMenuBox--search input:focus {
+    border-color: #E6E6FA;
+    outline: none;
+}
+
+/* mini Menu Box option */
+#miniMenu .miniMenuBox .miniMenuBox--option {
+    position: relative;
+
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 5px;
+    
+}
+
+#miniMenu .miniMenuBox .miniMenuBox--option .table {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+    border: 2px solid #E6E6FA;
+    border-radius: 10px;
+}
+
+#miniMenu .miniMenuBox .miniMenuBox--option .table .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 48px;
+
+    color: #708090;
+    font-size: 16px;
+}
+
+/* container */
+#container {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+/* first */
+#first {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+#first #moveNode {
+    position: absolute;
+
+    color: hotpink;
+
+    transform: translate(0px, 0px);
+}
+/* second */
+#second {
+    position: relative;
+
+    height: 100vh;
+}
+/* third */
+#third {
+    position: relative;
+
+    height: 100vh;
+}
