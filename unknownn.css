@@ -229,6 +229,51 @@ content box */
     height: calc(100% - 60px);
 }
 
+/* first
+content box Coffee Guide */
+#first .box .CoffeeGuide {
+    backdrop-filter: blur(10px);
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid #404040;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #404040;
+}
+
+#first .box .CoffeeGuide .title {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#first .box .CoffeeGuide .title ul {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#first .box .CoffeeGuide .title ul li {
+    color: #404040;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
 /* second */
 #second {
 

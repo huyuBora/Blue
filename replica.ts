@@ -30,3 +30,4 @@ function arrowBtnEvent(): void {
         });
     }
 }arrowBtnEvent();
+
