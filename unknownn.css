@@ -1,0 +1,43 @@
+/* · · · · · */
+#under {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/* · · · · · */
+#container {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    transform: translateY(0px);
+}
+
+/* · · · · · */
+#first {
+    background: salmon;
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/* · · · · · */
+#second {
+    background: sandybrown;
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+/* · · · · · */
+#third {
+    background: antiquewhite;
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
